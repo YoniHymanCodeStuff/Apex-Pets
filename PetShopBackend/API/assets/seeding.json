@@ -1,0 +1,102 @@
+[
+    {
+      "Id": 20,
+      "Species": "Joann",
+      "Category": "aquatic"
+    },
+    {
+      "Id": 1,
+      "Species": "Wooten",
+      "Category": "reptilians"
+    },
+    {
+      "Id": 2,
+      "Species": "Stevens",
+      "Category": "avians"
+    },
+    {
+      "Id": 3,
+      "Species": "Cotton",
+      "Category": "aquatic"
+    },
+    {
+      "Id": 4,
+      "Species": "Laurie",
+      "Category": "reptilians"
+    },
+    {
+      "Id": 5,
+      "Species": "Lauri",
+      "Category": "mammalia"
+    },
+    {
+      "Id": 6,
+      "Species": "Burks",
+      "Category": "mammalia"
+    },
+    {
+      "Id": 7,
+      "Species": "Karyn",
+      "Category": "avians"
+    },
+    {
+      "Id": 8,
+      "Species": "Sybil",
+      "Category": "mammalia"
+    },
+    {
+      "Id": 9,
+      "Species": "Ortiz",
+      "Category": "avians"
+    },
+    {
+      "Id": 10,
+      "Species": "Phyllis",
+      "Category": "avians"
+    },
+    {
+      "Id": 11,
+      "Species": "Ella",
+      "Category": "reptilians"
+    },
+    {
+      "Id": 12,
+      "Species": "Avery",
+      "Category": "avians"
+    },
+    {
+      "Id": 13,
+      "Species": "Yvette",
+      "Category": "reptilians"
+    },
+    {
+      "Id": 14,
+      "Species": "Watkins",
+      "Category": "reptilians"
+    },
+    {
+      "Id": 15,
+      "Species": "Koch",
+      "Category": "mammalia"
+    },
+    {
+      "Id": 16,
+      "Species": "Amy",
+      "Category": "mammalia"
+    },
+    {
+      "Id": 17,
+      "Species": "Donovan",
+      "Category": "mammalia"
+    },
+    {
+      "Id": 18,
+      "Species": "Farmer",
+      "Category": "reptilians"
+    },
+    {
+      "Id": 19,
+      "Species": "French",
+      "Category": "mammalia"
+    }
+  ]

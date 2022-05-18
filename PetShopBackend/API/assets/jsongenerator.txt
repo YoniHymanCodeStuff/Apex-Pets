@@ -1,0 +1,13 @@
+[
+  '{{repeat(20)}}',
+  {
+    Id: '{{index()}}',
+    Species:'{{firstName()}}',
+    Category:'{{random(["mammalia"],["reptilians"],["avians"],["aquatic"])}}'
+    
+
+  }
+]
+
+//note - have to change the starting index, since the db doesn't allow 
+//an index of 0
