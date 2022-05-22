@@ -33,6 +33,8 @@ namespace API
                 var uow = services.GetRequiredService<UoW>();
                 
 
+                
+
                 //migrates the db if entire db doesn't exist:
                 await context.Database.MigrateAsync();
 
