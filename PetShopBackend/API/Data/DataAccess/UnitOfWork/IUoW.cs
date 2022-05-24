@@ -9,6 +9,8 @@ namespace API.Data.DataAccess.UnitOfWork
     public interface IUoW 
     {
         IAnimalRepo animals {get;}
+        IAdminRepo admins {get;}
+        ICustomerRepo customers{get;}
 
         Task<bool> Complete();
     }

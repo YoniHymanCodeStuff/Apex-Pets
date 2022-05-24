@@ -18,6 +18,7 @@ using PetShop.PetShopBackend.API.Extensions;
 using API.Data.DataAccess.UnitOfWork;
 using API.Data.DataAccess.RepositoryClasses;
 using API.Data.DataAccess.RepositoryInterfaces;
+using API.Services.authentication;
 
 namespace API
 {
@@ -45,6 +46,7 @@ namespace API
             );
              
             services.AddScoped<IUoW, UoW>();
+            services.AddScoped<ITokenService, TokenService>();
             //services.AddScoped<IAnimalRepo,AnimalRepo>();
 
             //this causes issues so I removed it, even though it should be here.: 

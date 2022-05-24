@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.Data.Model;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Data.DataAccess
@@ -13,13 +14,15 @@ namespace API.Data.DataAccess
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
         }
+        
 
         // public DataContext()
         // {
         // }
 
         public DbSet<Animal> Animals {get;set;}
-
+        public DbSet<Customer> Customers {get;set;}
+        public DbSet<Admin> Admins {get;set;}
 
         //this part is just to rename i think. 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -7,21 +7,16 @@ using API.Data.DataAccess;
 using API.Data.DataAccess.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 using API.utilities;
+using API.Controllers;
 
 namespace PetShop.PetShopBackend.API.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class AnimalsController : ControllerBase
+
+    public class AnimalsController : BaseApiController
     {
         
         private readonly IUoW _uow;
         
-        //I probably should be using the IUOW here, that 
-        //is the whole point of it existing. 
-        //unfortunately it is buggy for unknown reasons. 
-        //maybe clarifying this mess of who is in charge and 
-        //where the context should come from will help... 
         public AnimalsController(IUoW uow)
         {
             _uow = uow;

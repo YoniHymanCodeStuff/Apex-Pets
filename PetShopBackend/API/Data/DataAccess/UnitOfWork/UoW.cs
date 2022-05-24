@@ -19,7 +19,8 @@ namespace API.Data.DataAccess.UnitOfWork
 
         }
         public IAnimalRepo animals => new AnimalRepo(_context);
-        
+        public IAdminRepo admins => new AdminRepo(_context);
+        public ICustomerRepo customers => new CustomerRepo(_context);
 
         public async Task<bool> Complete()
         {
