@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yonhy\\OneDrive\\Desktop\\HackerU\\MyAngularThing\\PetShop\\PetShopBackend\\API\\API.csproj": {}
+    "c:\\Users\\yonhy\\OneDrive\\Desktop\\HackerU\\MyAngularThing\\PetShop\\PetShopBackend\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yonhy\\OneDrive\\Desktop\\HackerU\\MyAngularThing\\PetShop\\PetShopBackend\\API\\API.csproj": {
+    "c:\\Users\\yonhy\\OneDrive\\Desktop\\HackerU\\MyAngularThing\\PetShop\\PetShopBackend\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yonhy\\OneDrive\\Desktop\\HackerU\\MyAngularThing\\PetShop\\PetShopBackend\\API\\API.csproj",
+        "projectUniqueName": "c:\\Users\\yonhy\\OneDrive\\Desktop\\HackerU\\MyAngularThing\\PetShop\\PetShopBackend\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\yonhy\\OneDrive\\Desktop\\HackerU\\MyAngularThing\\PetShop\\PetShopBackend\\API\\API.csproj",
+        "projectPath": "c:\\Users\\yonhy\\OneDrive\\Desktop\\HackerU\\MyAngularThing\\PetShop\\PetShopBackend\\API\\API.csproj",
         "packagesPath": "C:\\Users\\yonhy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yonhy\\OneDrive\\Desktop\\HackerU\\MyAngularThing\\PetShop\\PetShopBackend\\API\\obj\\",
+        "outputPath": "c:\\Users\\yonhy\\OneDrive\\Desktop\\HackerU\\MyAngularThing\\PetShop\\PetShopBackend\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yonhy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,7 +21,6 @@
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +39,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.13, )"
@@ -57,6 +60,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.18.0, )"
             }
           },
           "imports": [

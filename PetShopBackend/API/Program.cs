@@ -30,7 +30,7 @@ namespace API
             try
             {
                 var context = services.GetRequiredService<DataContext>();
-                var uow = services.GetRequiredService<UoW>();
+                var uow = services.GetRequiredService<IUoW>();
                 
 
                 

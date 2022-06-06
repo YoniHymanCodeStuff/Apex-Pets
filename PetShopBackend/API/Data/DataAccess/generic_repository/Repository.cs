@@ -33,9 +33,9 @@ namespace API.Data.DataAccess.generic_repository
             return Context.Set<TEntity>().Where(predicate);
         }
 
-        public TEntity SingleOrDefault(Expression<Func<TEntity, bool>> predicate)
+        public async Task<TEntity> SingleOrDefaultAsync(Expression<Func<TEntity, bool>> predicate)
         {
-            return Context.Set<TEntity>().SingleOrDefault(predicate);
+            return await Context.Set<TEntity>().SingleOrDefaultAsync(predicate);
         }
 
         public void Add(TEntity entity)

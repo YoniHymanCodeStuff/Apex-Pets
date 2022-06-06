@@ -38,10 +38,10 @@ namespace PetShop.PetShopBackend.API.Controllers
         {
             var cates = await _uow.animals.GetCategoriesAsync();
             
-            foreach (var i in cates)
-            {
-                utils.DebugMsg(i);
-            }     
+            // foreach (var i in cates)
+            // {
+            //     utils.DebugMsg(i);
+            // }     
 
             return Ok(cates);
             

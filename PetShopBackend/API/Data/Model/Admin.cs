@@ -5,14 +5,8 @@ using System.Threading.Tasks;
 
 namespace API.Data.Model
 {
-    public class Admin
+    public class Admin: User
     {
-        public int Id {get;set;}
-
-        public string UserName { get; set; }
-        
-        public string FirstName {get;set;}
-        public string LastName {get;set;}
 
         public string Email {get;set;}
 
@@ -20,12 +14,8 @@ namespace API.Data.Model
 
         public string City { get; set; }
 
-        public byte[] hash { get; set; }
-
-        public byte[] salt { get; set; }
-        
-
-               
+      
+            
         
         
         

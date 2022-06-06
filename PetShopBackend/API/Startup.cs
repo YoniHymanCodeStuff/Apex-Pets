@@ -64,6 +64,16 @@ namespace API
             });
 
             services.AddCors();
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).
+            AddJwtBearer(options=>{
+                options.tokenValidationParameters = new tokenValidationParameters{
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["TokenKey"])),
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                }
+            })
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -85,7 +95,7 @@ namespace API
             .AllowAnyMethod()
             .WithOrigins("https://localhost:4200"));
 
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

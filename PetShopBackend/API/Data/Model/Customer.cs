@@ -5,20 +5,19 @@ using System.Threading.Tasks;
 
 namespace API.Data.Model
 {
-    public class Customer
+    public class Customer : User
     {
-        public int Id {get;set;}
 
-        public string FirstName {get;set;}
-        public string LastName {get;set;}
 
+        //I made these separate fields bc for employee email is required. 
         public string Email {get;set;}
 
         //public string CreditInfo?? { get; set; }
 
         //public string avatar { get; set; } just a pic to put in corner
 
-        public string UserName { get; set; }
+
+        //might make sense to just have a linked "adress" entity. 
         public string City { get; set; }
         public string Street { get; set; }
 
@@ -27,17 +26,6 @@ namespace API.Data.Model
         public string Zip {get;set;}
 
         
-        public byte[] hash { get; set; }
 
-        public byte[] salt { get; set; }
-        
-        
-        
-        
-        
-
-        
-        
-        
     }
 }

@@ -22,6 +22,9 @@ namespace API.Data.DataAccess.UnitOfWork
         public IAdminRepo admins => new AdminRepo(_context);
         public ICustomerRepo customers => new CustomerRepo(_context);
 
+        public IUserRepo users => new UserRepo(_context);
+
+
         public async Task<bool> Complete()
         {
             return await _context.SaveChangesAsync() > 0;

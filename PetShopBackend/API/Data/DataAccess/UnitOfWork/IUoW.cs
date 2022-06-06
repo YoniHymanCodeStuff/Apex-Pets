@@ -12,6 +12,8 @@ namespace API.Data.DataAccess.UnitOfWork
         IAdminRepo admins {get;}
         ICustomerRepo customers{get;}
 
+        IUserRepo users{get;} 
+
         Task<bool> Complete();
     }
 }

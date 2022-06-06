@@ -12,10 +12,7 @@ namespace API.Data.DataAccess.generic_repository
         Task<IEnumerable<TEntity>> GetAllAsync();
         IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
               
-        //adding stuff that shouldn't be here:
-        //Task<IEnumerable<String>> GetCategoriesAsync(); 
-
-        TEntity SingleOrDefault(Expression<Func<TEntity, bool>> predicate);
+        Task<TEntity> SingleOrDefaultAsync(Expression<Func<TEntity, bool>> predicate);
         
         void Update(TEntity entity);
         void UpdateRange(IEnumerable<TEntity> entities);

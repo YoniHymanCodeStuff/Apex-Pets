@@ -17,7 +17,7 @@ namespace API.Data.utils
         //eventually this should probably be using the UoW and not operating 
         //directly on the context.  
 
-        public static async Task SeedAnimals(UoW uow){
+        public static async Task SeedAnimals(IUoW uow){
              
 
             if(await uow.animals.TableIsNotEmpty()){
