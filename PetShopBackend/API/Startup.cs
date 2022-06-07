@@ -19,6 +19,10 @@ using API.Data.DataAccess.UnitOfWork;
 using API.Data.DataAccess.RepositoryClasses;
 using API.Data.DataAccess.RepositoryInterfaces;
 using API.Services.authentication;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace API
 {
@@ -47,12 +51,7 @@ namespace API
              
             services.AddScoped<IUoW, UoW>();
             services.AddScoped<ITokenService, TokenService>();
-            //services.AddScoped<IAnimalRepo,AnimalRepo>();
-
-            //this causes issues so I removed it, even though it should be here.: 
-            //services.AddScoped<IUoW>();
-
-
+            
             
             //some debugging thing, I think i'm missing the package for it:
             //services.AddDatabaseDeveloperPageExceptionFilter();
@@ -67,13 +66,13 @@ namespace API
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).
             AddJwtBearer(options=>{
-                options.tokenValidationParameters = new tokenValidationParameters{
+                options.TokenValidationParameters = new TokenValidationParameters{
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["TokenKey"])),
                     ValidateIssuer = false,
                     ValidateAudience = false,
-                }
-            })
+                };
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

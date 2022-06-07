@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g/OK0SjJoxrmfaiz8oE0z0KfRymCiFwnyDneAQO7T3Zh1YBMeFu+/64gcBZqhZVVS6IRlA2Dbhcu3kewpPXMrA==",
+  "dgSpecHash": "Bx12LW7y1gQpfIky3H8RC5mWN0+DoAhHilXUEsOBmyy82i0EtGb0uC0EF122PIID6FE8jzcgIqjKM76AxQ8MDw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\yonhy\\OneDrive\\Desktop\\HackerU\\MyAngularThing\\PetShop\\PetShopBackend\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\yonhy\\OneDrive\\Desktop\\HackerU\\MyAngularThing\\PetShop\\PetShopBackend\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yonhy\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\yonhy\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.13\\microsoft.aspnetcore.authentication.jwtbearer.5.0.13.nupkg.sha512",

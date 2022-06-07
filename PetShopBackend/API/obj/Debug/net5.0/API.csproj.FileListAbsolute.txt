@@ -61,3 +61,6 @@ C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\AP
 C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
