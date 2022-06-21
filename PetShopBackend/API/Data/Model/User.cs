@@ -17,5 +17,6 @@ namespace API.Data.Model
         public byte[] hash { get; set; }
 
         public byte[] salt { get; set; }
+       
     }
 }

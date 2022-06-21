@@ -14,9 +14,7 @@ namespace API.Data.Model
 
         //public string CreditInfo?? { get; set; }
 
-        //public string avatar { get; set; } just a pic to put in corner
-
-
+        
         //might make sense to just have a linked "adress" entity. 
         public string City { get; set; }
         public string Street { get; set; }
@@ -24,6 +22,8 @@ namespace API.Data.Model
         public int houseNumber {get;set;}
 
         public string Zip {get;set;}
+
+         public Photo Avatar { get; set;}
 
         
 

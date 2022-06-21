@@ -18,8 +18,9 @@ namespace API.Data.DataAccess
         public DbSet<Customer> Customers {get;set;}
         public DbSet<Admin> Admins {get;set;}
         public DbSet<User> Users {get;set;} 
+        public DbSet<Photo> Photos {get;set;}
 
-        //this part is just to rename i think. 
+        //this part is just to rename i think.// why am I doing this here? 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 

@@ -10,9 +10,10 @@ namespace API.Data.Model
 
         public string Email {get;set;}
 
-        //public string ProfilePic { get; set; }
+        public Photo ProfilePic { get; set; }
 
         public string City { get; set; }
+
 
       
             
