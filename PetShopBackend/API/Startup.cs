@@ -24,6 +24,8 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using API.Middleware;
+using API.utilities;
+using API.Services.PhotoService;
 
 namespace API
 {
@@ -53,6 +55,8 @@ namespace API
             services.AddScoped<IUoW, UoW>();
             services.AddScoped<ITokenService, TokenService>();
             
+            services.Configure<CloudinarySettings>(_config.GetSection("CloudinarySettings"));
+            services.AddScoped<IPhotoService,PhotoService>();
             
             //some debugging thing, I think i'm missing the package for it:
             //services.AddDatabaseDeveloperPageExceptionFilter();
