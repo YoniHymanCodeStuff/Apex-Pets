@@ -15,14 +15,16 @@ namespace API.Data
         public string Category { get; set; }
         public Photo MainPhoto {get;set; }
 
-        // public string Required_Habitat { get; set; }
+        public string Required_Habitat { get; set; }
 
-        // public string Required_License { get; set; }
+        public string Required_License { get; set; }
 
-        // public string Description { get; set; }
+        public string Description { get; set; }
 
         public ICollection<Photo> images {get;set;}
 
+        //forgot price
+        
 
     }
 }

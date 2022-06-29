@@ -13,8 +13,6 @@ namespace API.Data.Model
         public string PhotoUrl { get; set; }
 
         public string Description { get; set; }
-        
-             
 
         
         

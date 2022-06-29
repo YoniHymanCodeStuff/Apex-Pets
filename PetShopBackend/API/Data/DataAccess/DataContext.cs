@@ -20,6 +20,9 @@ namespace API.Data.DataAccess
         public DbSet<User> Users {get;set;} 
         public DbSet<Photo> Photos {get;set;}
 
+        public DbSet<Order> Orders {get;set;}
+        public DbSet<DeliveryAdress> Adresses {get;set;}
+
         //this part is just to rename i think.// why am I doing this here? 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

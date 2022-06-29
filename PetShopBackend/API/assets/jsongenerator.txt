@@ -1,9 +1,15 @@
 [
   '{{repeat(20)}}',
   {
-    Id: '{{index()}}',
+    Id: '{{index()+1}}',
     Species:'{{firstName()}}',
-    Category:'{{random(["mammalia"],["reptilians"],["avians"],["aquatic"])}}'
+    Category:'{{random(["mammalia"],["reptilians"],["avians"],["aquatic"])}}',
+    Required_Habitat:'Habitat blah blah',
+    Required_License:'{{random(["A"],["B"],["C"])}}',
+    Description:'This animal blah blah blah',
+    images:[{PhotoUrl:'https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF',
+    Description:'this here is a racoon'}
+    ]    
     
 
   }

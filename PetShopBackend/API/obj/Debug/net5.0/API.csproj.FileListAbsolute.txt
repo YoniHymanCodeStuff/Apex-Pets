@@ -64,3 +64,11 @@ C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\AP
 C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\CloudinaryDotNet.dll
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll

@@ -62,8 +62,9 @@ namespace PetShop.PetShopBackend.API.Controllers
         public async Task<ActionResult<Animal>> GetAnimal(int id)
         {
                         
-            var animal = await _uow.animals.GetAsync(id);
-             
+            var animal = await _uow.animals.GetAnimalEagerAsync(id);
+
+                         
             return animal;
 
             

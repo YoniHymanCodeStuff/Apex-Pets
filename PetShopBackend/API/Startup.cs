@@ -26,6 +26,7 @@ using System.Text;
 using API.Middleware;
 using API.utilities;
 using API.Services.PhotoService;
+using API.helpers;
 
 namespace API
 {
@@ -54,6 +55,8 @@ namespace API
              
             services.AddScoped<IUoW, UoW>();
             services.AddScoped<ITokenService, TokenService>();
+
+            services.AddAutoMapper(typeof(AutomapperProfiles).Assembly);
             
             services.Configure<CloudinarySettings>(_config.GetSection("CloudinarySettings"));
             services.AddScoped<IPhotoService,PhotoService>();

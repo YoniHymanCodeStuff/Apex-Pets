@@ -1,102 +1,282 @@
 [
-    {
-      "Id": 20,
-      "Species": "Joann",
-      "Category": "aquatic"
-    },
-    {
-      "Id": 1,
-      "Species": "Wooten",
-      "Category": "reptilians"
-    },
-    {
-      "Id": 2,
-      "Species": "Stevens",
-      "Category": "avians"
-    },
-    {
-      "Id": 3,
-      "Species": "Cotton",
-      "Category": "aquatic"
-    },
-    {
-      "Id": 4,
-      "Species": "Laurie",
-      "Category": "reptilians"
-    },
-    {
-      "Id": 5,
-      "Species": "Lauri",
-      "Category": "mammalia"
-    },
-    {
-      "Id": 6,
-      "Species": "Burks",
-      "Category": "mammalia"
-    },
-    {
-      "Id": 7,
-      "Species": "Karyn",
-      "Category": "avians"
-    },
-    {
-      "Id": 8,
-      "Species": "Sybil",
-      "Category": "mammalia"
-    },
-    {
-      "Id": 9,
-      "Species": "Ortiz",
-      "Category": "avians"
-    },
-    {
-      "Id": 10,
-      "Species": "Phyllis",
-      "Category": "avians"
-    },
-    {
-      "Id": 11,
-      "Species": "Ella",
-      "Category": "reptilians"
-    },
-    {
-      "Id": 12,
-      "Species": "Avery",
-      "Category": "avians"
-    },
-    {
-      "Id": 13,
-      "Species": "Yvette",
-      "Category": "reptilians"
-    },
-    {
-      "Id": 14,
-      "Species": "Watkins",
-      "Category": "reptilians"
-    },
-    {
-      "Id": 15,
-      "Species": "Koch",
-      "Category": "mammalia"
-    },
-    {
-      "Id": 16,
-      "Species": "Amy",
-      "Category": "mammalia"
-    },
-    {
-      "Id": 17,
-      "Species": "Donovan",
-      "Category": "mammalia"
-    },
-    {
-      "Id": 18,
-      "Species": "Farmer",
-      "Category": "reptilians"
-    },
-    {
-      "Id": 19,
-      "Species": "French",
-      "Category": "mammalia"
-    }
-  ]
+  {
+    "Id": 1,
+    "Species": "April",
+    "Category": "aquatic",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "C",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Species": "Lindsay",
+    "Category": "reptilians",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "A",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 3,
+    "Species": "Corrine",
+    "Category": "mammalia",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "A",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 4,
+    "Species": "Collier",
+    "Category": "avians",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "C",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 5,
+    "Species": "Josefina",
+    "Category": "mammalia",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "A",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 6,
+    "Species": "Webster",
+    "Category": "avians",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "A",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 7,
+    "Species": "Heath",
+    "Category": "avians",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "C",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 8,
+    "Species": "Merritt",
+    "Category": "aquatic",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "C",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 9,
+    "Species": "Deanna",
+    "Category": "reptilians",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "C",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 10,
+    "Species": "Erika",
+    "Category": "aquatic",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "A",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 11,
+    "Species": "Sheena",
+    "Category": "aquatic",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "B",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 12,
+    "Species": "Millicent",
+    "Category": "avians",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "B",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 13,
+    "Species": "Gentry",
+    "Category": "reptilians",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "B",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 14,
+    "Species": "Eva",
+    "Category": "aquatic",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "B",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 15,
+    "Species": "Janette",
+    "Category": "aquatic",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "B",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 16,
+    "Species": "Nellie",
+    "Category": "mammalia",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "C",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 17,
+    "Species": "Conrad",
+    "Category": "mammalia",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "A",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 18,
+    "Species": "Meadows",
+    "Category": "mammalia",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "A",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 19,
+    "Species": "Flora",
+    "Category": "mammalia",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "C",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  },
+  {
+    "Id": 20,
+    "Species": "Essie",
+    "Category": "aquatic",
+    "Required_Habitat": "Habitat blah blah",
+    "Required_License": "C",
+    "Description": "This animal blah blah blah",
+    "images": [
+      {
+        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
+        "Description": "this here is a racoon"
+      }
+    ]
+  }
+]
