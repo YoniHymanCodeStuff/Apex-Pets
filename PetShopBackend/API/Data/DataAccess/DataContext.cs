@@ -28,6 +28,14 @@ namespace API.Data.DataAccess
         {
 
             modelBuilder.Entity<Animal>().ToTable("Animal");
+
+            modelBuilder.Entity<User>()
+            .HasDiscriminator(x => x.UserType);
+
+            modelBuilder.Entity<User>()
+            .Property(e => e.UserType)
+            .HasMaxLength(20)
+            .HasColumnName("User_type");
         }
     }
 }

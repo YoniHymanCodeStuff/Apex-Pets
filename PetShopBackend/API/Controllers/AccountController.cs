@@ -44,7 +44,7 @@ namespace PetShop.PetShopBackend.API.Controllers
                 hash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(registerDto.Password)),
                 salt = hmac.Key
             };
-
+ 
             _uow.customers.Add(customer);
 
             await _uow.Complete();
@@ -76,6 +76,30 @@ namespace PetShop.PetShopBackend.API.Controllers
 
         }
 
+        [HttpGet("UserData/{username}")]
+        public async Task<ActionResult<UserData_IsAdminDto>> GetUserData(string username){
+           
+            bool isAdmin = await _uow.users.CheckIfIsAdminAsync(username);
+            
+            UserData_IsAdminDto retval = new UserData_IsAdminDto{IsAdmin = isAdmin};
+
+            if(isAdmin){
+                retval.admin =  await _uow.admins.SingleOrDefaultAsync(x=>x.UserName == username);
+            }
+            else
+            {
+                retval.customer =  await _uow.customers.GetCustomerAsync(username);
+            }
+
+            return retval;
+        }
+
+        [HttpGet("IsAdmin/{username}")]
+        public async Task<ActionResult<bool>> GetIsUserAdmin(string username){
+           
+            return await _uow.users.CheckIfIsAdminAsync(username);
+        }
+
         private async Task<bool> UserExists(string username)
         {
             //I should probably create a repo function for this. 
@@ -84,8 +108,6 @@ namespace PetShop.PetShopBackend.API.Controllers
             if (user == null) { return false; }
             return true;
         }
-
-
 
     }
 }

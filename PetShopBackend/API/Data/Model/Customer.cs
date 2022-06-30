@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 namespace API.Data.Model
 {
@@ -14,6 +15,6 @@ namespace API.Data.Model
 
          public ICollection<Order> Orders {get;set;}
 
-        
+
     }
 }

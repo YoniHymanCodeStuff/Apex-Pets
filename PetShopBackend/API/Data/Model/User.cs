@@ -19,11 +19,10 @@ namespace API.Data.Model
 
         public byte[] salt { get; set; }
 
-        [Required]
+        // [Required]
         public string Email {get;set;}
 
         public Photo Avatar { get; set;}
-               
-       
+        public string UserType { get; internal set; }
     }
 }

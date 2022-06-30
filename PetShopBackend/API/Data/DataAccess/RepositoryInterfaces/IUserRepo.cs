@@ -9,6 +9,6 @@ namespace API.Data.DataAccess.RepositoryInterfaces
 {
     public interface IUserRepo : IRepository<User>
     {
-        
+        Task<bool> CheckIfIsAdminAsync(string username);  
     }
 }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using API.Data.DataAccess.generic_repository;
 using API.Data.DataAccess.RepositoryInterfaces;
 using API.Data.Model;
+using Microsoft.AspNetCore.Mvc;
 
 namespace API.Data.DataAccess.RepositoryClasses
 {
@@ -17,5 +18,7 @@ namespace API.Data.DataAccess.RepositoryClasses
             _context = context;
 
         }
+
+
     }
 }
