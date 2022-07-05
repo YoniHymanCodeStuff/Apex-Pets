@@ -12,6 +12,8 @@ using API.Data.Model;
 using System.Security.Cryptography;
 using API.Services.authentication;
 using API.Data.DTOs;
+using API.helpers;
+using AutoMapper;
 
 namespace PetShop.PetShopBackend.API.Controllers
 {
@@ -19,11 +21,12 @@ namespace PetShop.PetShopBackend.API.Controllers
     {
         private readonly IUoW _uow;
         private readonly ITokenService _tokenService;
-       
+        private readonly IMapper _mapper;
 
-        public AccountController(IUoW uow, ITokenService tokenService)
+        public AccountController(IUoW uow, ITokenService tokenService, IMapper mapper)
         {
             _tokenService = tokenService;
+            this._mapper = mapper;
             _uow = uow;
 
         }
@@ -72,30 +75,50 @@ namespace PetShop.PetShopBackend.API.Controllers
                 if (computedHash[i] != user.hash[i]) return Unauthorized("invalid password");
             }
 
-            return new UserDto { UserName = loginDto.Username, Token = _tokenService.CreateToken(user) };
+            bool isAdmin = await _uow.users.CheckIfIsAdminAsync(loginDto.Username);
+
+
+            return new UserDto { UserName = loginDto.Username,
+             Token = _tokenService.CreateToken(user),
+             IsAdmin = isAdmin };
 
         }
 
-        [HttpGet("UserData/{username}")]
-        public async Task<ActionResult<UserData_IsAdminDto>> GetUserData(string username){
+        // [HttpGet("UserData/{username}")]
+        // public async Task<ActionResult<UserData_IsAdminDto>> GetUserData(string username){
            
-            bool isAdmin = await _uow.users.CheckIfIsAdminAsync(username);
+        //     bool isAdmin = await _uow.users.CheckIfIsAdminAsync(username);
             
-            UserData_IsAdminDto retval = new UserData_IsAdminDto{IsAdmin = isAdmin};
+        //     UserData_IsAdminDto retval = new UserData_IsAdminDto{isAdmin = isAdmin};
 
-            if(isAdmin){
-                retval.admin =  await _uow.admins.SingleOrDefaultAsync(x=>x.UserName == username);
-            }
-            else
-            {
-                retval.customer =  await _uow.customers.GetCustomerAsync(username);
-            }
+        //     if(isAdmin){
+        //         retval.admin =  await _uow.admins.SingleOrDefaultAsync(x=>x.UserName == username);
+        //     }
+        //     else
+        //     {
+        //         retval.customer =  await _uow.customers.GetCustomerAsync(username);
+        //     }
 
-            return retval;
-        }
+        //     return retval;
+        // }
 
-        [HttpGet("IsAdmin/{username}")]
-        public async Task<ActionResult<bool>> GetIsUserAdmin(string username){
+        [HttpGet("Customer/{username}")]
+        public async Task<ActionResult<CustomerDto>> GetCustomer(string username)
+        {
+            var cust =  (await _uow.customers.GetCustomerAsync(username)).Value;
+
+            var custDto = _mapper.Map<CustomerDto>(cust);
+            //cant get automapper to work.not sure why. 
+
+            // var custDto = new CustomerDto (){
+                
+            // };
+
+            return custDto;
+        }  
+
+        
+        public async Task<bool> GetIsUserAdmin(string username){
            
             return await _uow.users.CheckIfIsAdminAsync(username);
         }

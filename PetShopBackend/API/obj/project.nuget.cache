@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "x4tYi3oGkYr+Vb9Rdvbe1FmhTwL095oAy0NcSPzE2P9JsPXg36qJ8kCrgc3xN4LY+J1Bn3G46qUMVn/8UO9uKA==",
+  "dgSpecHash": "MOhdjv4zGK944uZ9FJERuUbg4H75V5Zt/2Xa/n+UFeCmzAwceOK/F77ELV59kSac5xMlgIHfbk1JXZZbmvrWHA==",
   "success": true,
   "projectFilePath": "C:\\Users\\yonhy\\OneDrive\\Desktop\\HackerU\\MyAngularThing\\PetShop\\PetShopBackend\\API\\API.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\yonhy\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\yonhy\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\yonhy\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\yonhy\\.nuget\\packages\\cloudinarydotnet\\1.18.1\\cloudinarydotnet.1.18.1.nupkg.sha512",
     "C:\\Users\\yonhy\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

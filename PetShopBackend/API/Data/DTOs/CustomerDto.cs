@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+using API.Data.Model;
 
-namespace API.Data.Model
+namespace API.Data.DTOs
 {
-    public class Customer : User
+    public class CustomerDto : BaseUserDto
     {
 
         public string CreditInfo { get; set; }
@@ -14,9 +14,5 @@ namespace API.Data.Model
         public DeliveryAdress Adress {get;set;}
 
          public ICollection<Order> Orders {get;set;}
-
-        
-
-
     }
 }
