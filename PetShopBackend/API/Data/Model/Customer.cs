@@ -11,11 +11,13 @@ namespace API.Data.Model
 
         public string CreditInfo { get; set; }
        
-        public DeliveryAdress Adress {get;set;}
+        public DeliveryAdress Address {get;set;}
 
-         public ICollection<Order> Orders {get;set;}
+         public ICollection<Order> Orders {get;set;} 
 
+        public int PhoneNumber { get; set; } = 05000000;
         
+                
 
 
     }

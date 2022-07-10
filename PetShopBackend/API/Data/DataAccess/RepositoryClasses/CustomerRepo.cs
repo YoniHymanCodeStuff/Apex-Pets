@@ -23,7 +23,9 @@ namespace API.Data.DataAccess.RepositoryClasses
         public async Task<ActionResult<Customer>> GetCustomerAsync(string username)
         {
             return await _context.Customers
+            .AsNoTracking()
             .Include(x=>x.Orders)
+            .Include(a=>a.Address)
             .FirstOrDefaultAsync(x=>x.UserName == username);
         }
     }

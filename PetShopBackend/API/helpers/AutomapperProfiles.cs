@@ -18,7 +18,7 @@ namespace API.helpers
 
         CreateMap<Customer,CustomerDto>();
 
-       
+       CreateMap<CustomerUpdateDto,Customer>();
      }   
     }
 }

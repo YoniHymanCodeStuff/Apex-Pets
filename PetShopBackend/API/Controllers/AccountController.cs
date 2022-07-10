@@ -14,6 +14,7 @@ using API.Services.authentication;
 using API.Data.DTOs;
 using API.helpers;
 using AutoMapper;
+using System.Security.Claims;
 
 namespace PetShop.PetShopBackend.API.Controllers
 {
@@ -27,7 +28,7 @@ namespace PetShop.PetShopBackend.API.Controllers
         {
             _tokenService = tokenService;
             this._mapper = mapper;
-            _uow = uow;
+            _uow = uow; 
 
         }
 
@@ -45,7 +46,9 @@ namespace PetShop.PetShopBackend.API.Controllers
             {
                 UserName = registerDto.Username,
                 hash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(registerDto.Password)),
-                salt = hmac.Key
+                salt = hmac.Key,
+                Address = new DeliveryAdress()
+
             };
  
             _uow.customers.Add(customer);
@@ -84,23 +87,41 @@ namespace PetShop.PetShopBackend.API.Controllers
 
         }
 
-        // [HttpGet("UserData/{username}")]
-        // public async Task<ActionResult<UserData_IsAdminDto>> GetUserData(string username){
+        [HttpPut("UpdateCustomer")]
+       public async Task<ActionResult> UpdateCustomer(CustomerUpdateDto dto)
+        {
+            System.Console.WriteLine("got here");
+            //4. we want to have hold of the user and username, 
+            // * we don't believe to the client giving us the right username.
+            // * we'll authenticate against the token, and we'll get the username from the token
+            // * in the controller we have access to the ClaimsPrincipal (it's an object created from the token sent from the client side)
+            var username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value; // I'm looking for the NameIdentifier claim (nameid in the payload in the jwt)
+            var customer = (await _uow.customers.GetCustomerAsync(username)).Value;
            
-        //     bool isAdmin = await _uow.users.CheckIfIsAdminAsync(username);
-            
-        //     UserData_IsAdminDto retval = new UserData_IsAdminDto{isAdmin = isAdmin};
 
-        //     if(isAdmin){
-        //         retval.admin =  await _uow.admins.SingleOrDefaultAsync(x=>x.UserName == username);
-        //     }
-        //     else
-        //     {
-        //         retval.customer =  await _uow.customers.GetCustomerAsync(username);
-        //     }
+            // map the DTO to the user automatically (otherwise we would have to do it manually)
+            // no need for that: user.City = memberUpdateDTO.City;
+            _mapper.Map(dto, customer); 
 
-        //     return retval;
-        // }
+            _uow.customers.Update(customer);
+             
+            // now the entity is flagged as updated by EF (it's not saved yet and it doesn't matter if the entity was actually modified)
+
+            if(await _uow.Complete())
+            {
+                return NoContent();
+            }
+
+            // if failed, return a bad request
+            return BadRequest("Failed to update customer profile");
+            // 5. test our api in postman, and see if it works, 
+            // * go to postman section 9
+            // * start with the login to save the token as an environment variables
+            // * and then update the user
+            // * good - 204: no content
+            // * go to member/edit in the client to see the updated data
+        }
+
 
         [HttpGet("Customer/{username}")]
         public async Task<ActionResult<CustomerDto>> GetCustomer(string username)
@@ -108,11 +129,6 @@ namespace PetShop.PetShopBackend.API.Controllers
             var cust =  (await _uow.customers.GetCustomerAsync(username)).Value;
 
             var custDto = _mapper.Map<CustomerDto>(cust);
-            //cant get automapper to work.not sure why. 
-
-            // var custDto = new CustomerDto (){
-                
-            // };
 
             return custDto;
         }  

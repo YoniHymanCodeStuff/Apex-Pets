@@ -3,14 +3,16 @@ using System;
 using API.Data.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20220706195003_addedPhoneNum")]
+    partial class addedPhoneNum
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -182,7 +184,7 @@ namespace API.Migrations
                 {
                     b.HasBaseType("API.Data.Model.User");
 
-                    b.Property<int?>("AddressId")
+                    b.Property<int?>("AdressId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("CreditInfo")
@@ -191,7 +193,7 @@ namespace API.Migrations
                     b.Property<int>("PhoneNumber")
                         .HasColumnType("INTEGER");
 
-                    b.HasIndex("AddressId");
+                    b.HasIndex("AdressId");
 
                     b.HasDiscriminator().HasValue("Customer");
                 });
@@ -230,11 +232,11 @@ namespace API.Migrations
 
             modelBuilder.Entity("API.Data.Model.Customer", b =>
                 {
-                    b.HasOne("API.Data.Model.DeliveryAdress", "Address")
+                    b.HasOne("API.Data.Model.DeliveryAdress", "Adress")
                         .WithMany()
-                        .HasForeignKey("AddressId");
+                        .HasForeignKey("AdressId");
 
-                    b.Navigation("Address");
+                    b.Navigation("Adress");
                 });
 
             modelBuilder.Entity("API.Data.Animal", b =>

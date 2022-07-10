@@ -6,15 +6,17 @@ using API.Data.Model;
 
 namespace API.Data.DTOs
 {
-    public class CustomerDto : BaseUserDto
+    public class CustomerUpdateDto
     {
-
         public string CreditInfo { get; set; }
        
         public DeliveryAdress Address {get;set;}
 
-         public ICollection<Order> Orders {get;set;}
+        public int PhoneNumber { get; set; } 
 
-         public int PhoneNumber { get; set; }
+        public string FirstName {get;set;}
+        public string LastName {get;set;}
+         public string Email {get;set;}
+
     }
 }
