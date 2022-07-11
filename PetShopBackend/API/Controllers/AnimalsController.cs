@@ -8,6 +8,7 @@ using API.Data.DataAccess.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 using API.utilities;
 using API.Controllers;
+using API.Data.DTOs;
 
 namespace PetShop.PetShopBackend.API.Controllers
 {
@@ -56,6 +57,17 @@ namespace PetShop.PetShopBackend.API.Controllers
             return Ok(CategoryAnimals);
 
             
+        }
+
+        [HttpGet("CartAnimals/{customerName}")]
+        public async Task<ActionResult<ICollection<CartAnimalDto>>> GetCartAnimalsAsync(string customerName)
+        {
+            //this is not secure currently... 
+            
+            var cartAnimals = await _uow.animals.GetCartAnimals(customerName);
+            
+            return Ok(cartAnimals);
+
         }
 
         [HttpGet("{id}")]

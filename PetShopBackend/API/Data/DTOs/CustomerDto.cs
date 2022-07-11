@@ -14,6 +14,7 @@ namespace API.Data.DTOs
         public DeliveryAdress Address {get;set;}
 
          public ICollection<Order> Orders {get;set;}
+         public ICollection<ShoppingCartItem> ShoppingCart {get;set;}
 
          public int PhoneNumber { get; set; }
     }

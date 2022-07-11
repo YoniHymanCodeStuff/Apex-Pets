@@ -3,14 +3,16 @@ using System;
 using API.Data.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20220711080820_changedPhotos")]
+    partial class changedPhotos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,9 +40,6 @@ namespace API.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Species")
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal>("price")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -129,25 +128,6 @@ namespace API.Migrations
                     b.HasIndex("AnimalId");
 
                     b.ToTable("Photos");
-                });
-
-            modelBuilder.Entity("API.Data.Model.ShoppingCartItem", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("CustomerId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("OrderedAnimalId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CustomerId");
-
-                    b.ToTable("ShoppingCartItems");
                 });
 
             modelBuilder.Entity("API.Data.Model.User", b =>
@@ -240,13 +220,6 @@ namespace API.Migrations
                         .HasForeignKey("AnimalId");
                 });
 
-            modelBuilder.Entity("API.Data.Model.ShoppingCartItem", b =>
-                {
-                    b.HasOne("API.Data.Model.Customer", null)
-                        .WithMany("ShoppingCart")
-                        .HasForeignKey("CustomerId");
-                });
-
             modelBuilder.Entity("API.Data.Model.User", b =>
                 {
                     b.HasOne("API.Data.Model.Photo", "Avatar")
@@ -273,8 +246,6 @@ namespace API.Migrations
             modelBuilder.Entity("API.Data.Model.Customer", b =>
                 {
                     b.Navigation("Orders");
-
-                    b.Navigation("ShoppingCart");
                 });
 #pragma warning restore 612, 618
         }

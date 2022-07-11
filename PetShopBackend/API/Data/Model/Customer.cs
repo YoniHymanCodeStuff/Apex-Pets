@@ -15,6 +15,8 @@ namespace API.Data.Model
 
          public ICollection<Order> Orders {get;set;} 
 
+         public ICollection<ShoppingCartItem> ShoppingCart {get;set;} 
+
         public int PhoneNumber { get; set; } = 05000000;
         
                 

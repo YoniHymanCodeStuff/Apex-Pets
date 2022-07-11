@@ -4,27 +4,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using API.Data.Model;
 
-namespace API.Data
+namespace API.Data.DTOs
 {
-    public class Animal 
+    public class CartAnimalDto
     {
-
+            
         public int Id { get; set; }
         public string Species { get; set; }
 
-        public string Category { get; set; }
         public Photo MainPhoto {get;set; }
 
-        public string Required_Habitat { get; set; }
-
         public string Required_License { get; set; }
-
-        public string Description { get; set; }
-
-        public ICollection<Photo> images {get;set;}
 
         public decimal price { get; set; }
                    
         
+    
     }
 }

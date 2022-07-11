@@ -25,8 +25,11 @@ namespace API.Data.DataAccess.RepositoryClasses
             return await _context.Customers
             .AsNoTracking()
             .Include(x=>x.Orders)
+            .Include(x=>x.ShoppingCart)
             .Include(a=>a.Address)
             .FirstOrDefaultAsync(x=>x.UserName == username);
         }
+
+        //why am I returning an actionResult? this might be a mistake. 
     }
 }
