@@ -28,6 +28,24 @@ namespace API.Data.DataAccess.RepositoryClasses
             .Include(x=>x.ShoppingCart)
             .Include(a=>a.Address)
             .FirstOrDefaultAsync(x=>x.UserName == username);
+
+            //this is used in many places, some need all the details even 
+            //though not all do. might make sense to split it up more effectively. 
+            //however, effective use of Dtos should sove the issue. 
+        }
+
+        public async Task<ActionResult<Customer>> GetCustomerForUpdates(string username)
+        {
+            return await _context.Customers
+            .AsTracking()
+            .Include(x=>x.Orders)
+            .Include(x=>x.ShoppingCart)
+            .Include(a=>a.Address)
+            .FirstOrDefaultAsync(x=>x.UserName == username);
+
+            //this is used in many places, some need all the details even 
+            //though not all do. might make sense to split it up more effectively. 
+            //however, effective use of Dtos should sove the issue. 
         }
 
         //why am I returning an actionResult? this might be a mistake. 

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.Data;
 using API.Data.DTOs;
 using API.Data.Model;
 using AutoMapper;
@@ -19,6 +20,8 @@ namespace API.helpers
         CreateMap<Customer,CustomerDto>();
 
        CreateMap<CustomerUpdateDto,Customer>();
+
+       CreateMap<Animal,CartAnimalDto>();
      }   
     }
 }

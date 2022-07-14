@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using API.Data.DataAccess.UnitOfWork;
+using API.Data.DTOs;
 using API.Data.Model;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,12 +27,15 @@ namespace API.Controllers
         //     var cart = _uow.customers.GetCustomerAsync(username).
         // }
 
-        [HttpPost("Cart")]
-        public async Task<ActionResult> AddToCart(string username, int animalId)
-        {
-            var item = new ShoppingCartItem(){OrderedAnimalId = animalId};
 
-            var user = (await _uow.customers.GetCustomerAsync(username)).Value;
+        [HttpPost("Cart-Add")]
+        public async Task<ActionResult> AddToCart(addToCartDto dto)
+        {
+            var item = new ShoppingCartItem(){OrderedAnimalId = dto.animalId};
+
+            var user = (await _uow.customers.GetCustomerAsync(dto.username)).Value;
+
+            
 
             user.ShoppingCart.Add(item);
 
@@ -44,13 +48,17 @@ namespace API.Controllers
             return BadRequest("Failed to add item to cart");
         }
 
-        [HttpDelete("Cart")]
-        public async Task<ActionResult> RemoveFromCart(string username, ShoppingCartItem item)
+        [HttpPut("Cart-Remove")]
+        public async Task<ActionResult> RemoveFromCart(CartRemoveDto dto)
         {
             
-            var user = (await _uow.customers.GetCustomerAsync(username)).Value;
+            var user = (await _uow.customers.GetCustomerForUpdates(dto.username)).Value;
 
-            user.ShoppingCart.Remove(item);
+            //var parsedItem = (ShoppingCartItem)dto.item;
+
+            var itemToRemove = user.ShoppingCart.Where(x=>x.Id == dto.item.Id).SingleOrDefault();
+            
+            user.ShoppingCart.Remove(itemToRemove);
 
             _uow.customers.Update(user); 
 
@@ -63,7 +71,7 @@ namespace API.Controllers
         [HttpPut("Checkout")]
         public async Task<ActionResult> Checkout(string username)
         {
-            var user = (await _uow.customers.GetCustomerAsync(username)).Value;
+            var user = (await _uow.customers.GetCustomerForUpdates(username)).Value;
 
             var AnimalData = await _uow.animals.GetAnimalsForCheckout(user);
                                  
@@ -91,13 +99,29 @@ namespace API.Controllers
 
         }
 
+        [HttpGet("CartAnimals/{customerName}")]
+        public async Task<ActionResult<ICollection<CartAnimalDto>>> GetCartAnimalsAsync(string customerName)
+        {
+            //this is not secure currently... 
+            
+            var cartAnimals = await _uow.animals.GetCartAnimals(customerName);
+            
+            return Ok(cartAnimals);
 
-        // public async Task CommitOrder
+        }
 
-        
+
+        //is this neccessary? I just get this all when I get the user. which
+        //I probably should have anyways... 
+        // [HttpGet("{username}")]
+        // public async Task<ActionResult<ICollection<Order>>> GetCustomerOrders(string username)
+        // {
+        //     var customer = 
+        // }
+               
         // public async Task EditOrderstatus
 
 
-        //GetCustomerOrders
+        
     }
 }

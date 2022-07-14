@@ -4,7 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using API.Data.DataAccess.generic_repository;
 using API.Data.DataAccess.RepositoryInterfaces;
+using API.Data.DTOs;
 using API.Data.Model;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using static API.utilities.utils;
 
@@ -13,11 +15,12 @@ namespace API.Data.DataAccess.RepositoryClasses
     public class AnimalRepo : Repository<Animal>, IAnimalRepo
     {
         private readonly DataContext _context;
-        
-        public AnimalRepo(DataContext context) : base(context)
+        private readonly IMapper _mapper;
+
+        public AnimalRepo(DataContext context, IMapper mapper ) : base(context)
         {
             _context = context;
-
+            _mapper = mapper;
         }
 
         public async Task<Animal> GetAnimalEagerAsync(int id)
@@ -53,7 +56,7 @@ namespace API.Data.DataAccess.RepositoryClasses
             return await _context.Animals.Where(x=>IDList.Contains(x.Id)).ToListAsync();
         }
         
-        public async Task<IEnumerable<Animal>> GetCartAnimals(string username){
+        public async Task<IEnumerable<CartAnimalDto>> GetCartAnimals(string username){
 
             var cart = await _context.Customers.Where(x=>x.UserName == username)
             .Select(x=>x.ShoppingCart).SingleOrDefaultAsync();
@@ -63,11 +66,18 @@ namespace API.Data.DataAccess.RepositoryClasses
             var animalBank = await _context.Animals
             .Where(x=>relevantIds.Contains(x.Id)).ToListAsync();
 
-            IEnumerable<Animal> cartAnimals = new List<Animal>();
+            var cartAnimals = new List<CartAnimalDto>();
 
-            foreach (var animal in cart)
+            foreach (var cartItem in cart)
             {
-                cartAnimals.Append(animalBank.SingleOrDefault(x=>x.Id == animal.OrderedAnimalId));
+                var animal = animalBank.SingleOrDefault(x=>x.Id == cartItem.OrderedAnimalId);
+                
+                var cartAnimal = _mapper.Map<CartAnimalDto>(animal);
+
+                cartAnimal.animalId = animal.Id;
+                cartAnimal.cartItemId = cartItem.Id;
+
+                cartAnimals.Add(cartAnimal);
             }
 
             return cartAnimals;

@@ -11,5 +11,6 @@ namespace API.Data.DataAccess.RepositoryInterfaces
     public interface ICustomerRepo : IRepository<Customer>
     {
         Task<ActionResult<Customer>> GetCustomerAsync(string username);
+        Task<ActionResult<Customer>> GetCustomerForUpdates(string username);
     }
 }

@@ -59,16 +59,6 @@ namespace PetShop.PetShopBackend.API.Controllers
             
         }
 
-        [HttpGet("CartAnimals/{customerName}")]
-        public async Task<ActionResult<ICollection<CartAnimalDto>>> GetCartAnimalsAsync(string customerName)
-        {
-            //this is not secure currently... 
-            
-            var cartAnimals = await _uow.animals.GetCartAnimals(customerName);
-            
-            return Ok(cartAnimals);
-
-        }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Animal>> GetAnimal(int id)

@@ -90,7 +90,7 @@ namespace PetShop.PetShopBackend.API.Controllers
         [HttpPut("UpdateCustomer")]
        public async Task<ActionResult> UpdateCustomer(CustomerUpdateDto dto)
         {
-            System.Console.WriteLine("got here");
+           
             //4. we want to have hold of the user and username, 
             // * we don't believe to the client giving us the right username.
             // * we'll authenticate against the token, and we'll get the username from the token
