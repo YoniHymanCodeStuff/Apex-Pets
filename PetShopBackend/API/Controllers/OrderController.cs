@@ -68,27 +68,45 @@ namespace API.Controllers
             return BadRequest("Failed to remove item from cart");
         }
 
-        [HttpPut("Checkout")]
+        [HttpDelete("Checkout/{username}")]
         public async Task<ActionResult> Checkout(string username)
         {
+            
             var user = (await _uow.customers.GetCustomerForUpdates(username)).Value;
 
             var AnimalData = await _uow.animals.GetAnimalsForCheckout(user);
-                                 
-            foreach (var item in user.ShoppingCart)
+
+            List<ShoppingCartItem> cartList = user.ShoppingCart.ToList();
+            
+            for (var i = 0; i < cartList.Count; i++)
             {
+                var item = cartList[i];
                 var animal = AnimalData.Where(x=>x.Id == item.OrderedAnimalId).SingleOrDefault();
 
-                user.Orders.Append(new Order(){
+                user.Orders.Add(new Order(){
                     OrderTimeStamp = DateTime.Now,
                     OrderStatus  = "Pending",
                     OrderedAnimalId = animal.Id,
                     OrderedAnimalSpecies = animal.Species,
                     price = animal.price
                 });
+                
             }
 
-            user.ShoppingCart = new List<ShoppingCartItem>();
+            // foreach (ShoppingCartItem item in cartList)
+            // {
+            //     var animal = AnimalData.Where(x=>x.Id == item.OrderedAnimalId).SingleOrDefault();
+
+            //     user.Orders.Append(new Order(){
+            //         OrderTimeStamp = DateTime.Now,
+            //         OrderStatus  = "Pending",
+            //         OrderedAnimalId = animal.Id,
+            //         OrderedAnimalSpecies = animal.Species,
+            //         price = animal.price
+            //     });
+            // }
+
+            user.ShoppingCart.Clear();
 
             _uow.customers.Update(user);
 
