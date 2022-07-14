@@ -48,6 +48,16 @@ namespace API.Data.DataAccess.RepositoryClasses
             //however, effective use of Dtos should sove the issue. 
         }
 
+        public async Task<IEnumerable<Order>> GetCustomerOrders(string customerName)
+        {
+            return await _context.Customers
+            .AsNoTracking()
+            .Where(x=>x.UserName == customerName)
+            .Select(x=>x.Orders)
+            .SingleOrDefaultAsync(); 
+
+        }
+
         //why am I returning an actionResult? this might be a mistake. 
     }
 }

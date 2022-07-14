@@ -93,19 +93,6 @@ namespace API.Controllers
                 
             }
 
-            // foreach (ShoppingCartItem item in cartList)
-            // {
-            //     var animal = AnimalData.Where(x=>x.Id == item.OrderedAnimalId).SingleOrDefault();
-
-            //     user.Orders.Append(new Order(){
-            //         OrderTimeStamp = DateTime.Now,
-            //         OrderStatus  = "Pending",
-            //         OrderedAnimalId = animal.Id,
-            //         OrderedAnimalSpecies = animal.Species,
-            //         price = animal.price
-            //     });
-            // }
-
             user.ShoppingCart.Clear();
 
             _uow.customers.Update(user);
@@ -125,6 +112,17 @@ namespace API.Controllers
             var cartAnimals = await _uow.animals.GetCartAnimals(customerName);
             
             return Ok(cartAnimals);
+
+        }
+
+        [HttpGet("orders/{customerName}")]
+        public async Task<ActionResult<ICollection<CartAnimalDto>>> GetOrders(string customerName)
+        {
+            //this is not secure currently... 
+            
+            var orders = await _uow.customers.GetCustomerOrders(customerName);
+            
+            return Ok(orders);
 
         }
 

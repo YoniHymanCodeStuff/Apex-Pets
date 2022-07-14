@@ -12,5 +12,6 @@ namespace API.Data.DataAccess.RepositoryInterfaces
     {
         Task<ActionResult<Customer>> GetCustomerAsync(string username);
         Task<ActionResult<Customer>> GetCustomerForUpdates(string username);
+        Task<IEnumerable<Order>> GetCustomerOrders(string customerName);
     }
 }
