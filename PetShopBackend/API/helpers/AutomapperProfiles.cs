@@ -7,6 +7,7 @@ using API.Data.DTOs;
 using API.Data.Model;
 using AutoMapper;
 
+
 namespace API.helpers
 {
     public class AutomapperProfiles : Profile
@@ -22,7 +23,17 @@ namespace API.helpers
        CreateMap<CustomerUpdateDto,Customer>();
 
        CreateMap<Animal,CartAnimalDto>();
+
+       CreateMap<Order,OrderDto>()
+       .ForMember(dest=>dest.OrderTimeStamp, opt=>opt.MapFrom(src=>FormatDate(src.OrderTimeStamp)))
+       .ForMember(dest=>dest.DeliveryTimeStamp, opt=>opt.MapFrom(src=>FormatDate(src.DeliveryTimeStamp)));
      }   
+
+     private string FormatDate(DateTime dt)
+     {
+      
+      return dt.ToString("MM/dd/yyyy HH:mm");
+     }
     }
 }
 

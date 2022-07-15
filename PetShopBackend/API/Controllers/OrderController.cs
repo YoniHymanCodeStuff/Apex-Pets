@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using API.Data.DataAccess.UnitOfWork;
 using API.Data.DTOs;
 using API.Data.Model;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -13,8 +14,10 @@ namespace API.Controllers
     public class OrderController : BaseApiController
     {
         private readonly IUoW _uow;
-       public OrderController(IUoW uow)
+        private readonly IMapper _mapper;
+       public OrderController(IUoW uow,IMapper mapper)
        {
+            _mapper = mapper;
             _uow = uow;
         
        }
@@ -116,13 +119,15 @@ namespace API.Controllers
         }
 
         [HttpGet("orders/{customerName}")]
-        public async Task<ActionResult<ICollection<CartAnimalDto>>> GetOrders(string customerName)
+        public async Task<ActionResult<ICollection<OrderDto>>> GetOrders(string customerName)
         {
             //this is not secure currently... 
             
             var orders = await _uow.customers.GetCustomerOrders(customerName);
             
-            return Ok(orders);
+            var orderDtos = _mapper.Map<ICollection<OrderDto>>(orders);
+
+            return Ok(orderDtos);
 
         }
 
