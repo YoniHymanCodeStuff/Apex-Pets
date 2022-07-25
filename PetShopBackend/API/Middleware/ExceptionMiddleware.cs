@@ -40,7 +40,7 @@ namespace API.Middleware
             {
                 //here if everything goes fine, just pass the context on and do nothing. 
                 await next(context);
-            }
+            } 
             catch(Exception ex)
             {
                 logger.LogError(ex, ex.Message);

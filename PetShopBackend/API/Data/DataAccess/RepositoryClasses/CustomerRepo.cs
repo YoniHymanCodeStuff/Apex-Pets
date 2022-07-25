@@ -27,6 +27,7 @@ namespace API.Data.DataAccess.RepositoryClasses
             .Include(x=>x.Orders)
             .Include(x=>x.ShoppingCart)
             .Include(a=>a.Address)
+            .Include(x=>x.Avatar)
             .FirstOrDefaultAsync(x=>x.UserName == username);
 
             //this is used in many places, some need all the details even 

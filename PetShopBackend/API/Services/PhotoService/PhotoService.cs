@@ -30,6 +30,8 @@ namespace API.Services.PhotoService
             return result;
         }
 
+//need to make a version of this that saves the correct type for animal pics. 
+//currently the one I have is good for avatars. 
         public async Task<ImageUploadResult> UploadPhotoAsync(IFormFile file)
         {
            var uploadResult = new ImageUploadResult();

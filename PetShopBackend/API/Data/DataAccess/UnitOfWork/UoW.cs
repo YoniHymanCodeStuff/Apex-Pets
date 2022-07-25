@@ -23,6 +23,7 @@ namespace API.Data.DataAccess.UnitOfWork
         }
         public IAnimalRepo animals => new AnimalRepo(_context,_mapper);
         public IAdminRepo admins => new AdminRepo(_context);
+        public IPhotoRepo photos=> new PhotoRepo(_context);//should this exist?
         public ICustomerRepo customers => new CustomerRepo(_context);
 
         public IUserRepo users => new UserRepo(_context);

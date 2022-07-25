@@ -15,6 +15,7 @@ using API.Data.DTOs;
 using API.helpers;
 using AutoMapper;
 using System.Security.Claims;
+using API.Extensions;
 
 namespace PetShop.PetShopBackend.API.Controllers
 {
@@ -42,13 +43,16 @@ namespace PetShop.PetShopBackend.API.Controllers
             using var hmac = new HMACSHA512();
 
 
+            var photo = new Photo();
+            _uow.photos.Add(photo);
+
             var customer = new Customer
             {
                 UserName = registerDto.Username,
                 hash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(registerDto.Password)),
                 salt = hmac.Key,
-                Address = new DeliveryAdress()
-
+                Avatar = photo
+                
             };
  
             _uow.customers.Add(customer);
@@ -91,11 +95,8 @@ namespace PetShop.PetShopBackend.API.Controllers
        public async Task<ActionResult> UpdateCustomer(CustomerUpdateDto dto)
         {
            
-            //4. we want to have hold of the user and username, 
-            // * we don't believe to the client giving us the right username.
-            // * we'll authenticate against the token, and we'll get the username from the token
-            // * in the controller we have access to the ClaimsPrincipal (it's an object created from the token sent from the client side)
-            var username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value; // I'm looking for the NameIdentifier claim (nameid in the payload in the jwt)
+            
+            var username = User.GetUserName(); 
             var customer = (await _uow.customers.GetCustomerAsync(username)).Value;
            
 
@@ -123,9 +124,12 @@ namespace PetShop.PetShopBackend.API.Controllers
         }
 
 
-        [HttpGet("Customer/{username}")]
+        [HttpGet("Customer/{username}",Name = "GetCustomer")]
         public async Task<ActionResult<CustomerDto>> GetCustomer(string username)
         {
+            
+            //should I also be getting the name from the token here? probably
+
             var cust =  (await _uow.customers.GetCustomerAsync(username)).Value;
 
             var custDto = _mapper.Map<CustomerDto>(cust);

@@ -32,7 +32,7 @@ namespace API.helpers
      private string FormatDate(DateTime dt)
      {
       
-      return dt.ToString("MM/dd/yyyy HH:mm");
+      return dt.ToString("dd/MM/yyyy HH:mm");
      }
     }
 }

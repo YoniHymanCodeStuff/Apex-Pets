@@ -60,7 +60,7 @@ namespace PetShop.PetShopBackend.API.Controllers
         }
 
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}",Name = "GetAnimal")]
         public async Task<ActionResult<Animal>> GetAnimal(int id)
         {
                         
@@ -70,6 +70,24 @@ namespace PetShop.PetShopBackend.API.Controllers
             return animal;
 
             
+        }
+
+        [HttpPut]
+        public async Task<ActionResult<Animal>> UpdateAnimal(Animal animal){
+            //first check if user is admin and if not return access denied. 
+
+            // var anim = await _uow.animals.GetAsync(animal.Id);
+
+            // anim = animal;
+            
+            _uow.animals.Update(animal);
+
+            if(await _uow.Complete())
+            {
+                return NoContent();
+            }
+            
+            return BadRequest("Failed to update animal");
         }
 
     }

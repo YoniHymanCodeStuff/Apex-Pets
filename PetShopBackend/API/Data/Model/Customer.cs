@@ -11,7 +11,7 @@ namespace API.Data.Model
 
         public string CreditInfo { get; set; }
        
-        public DeliveryAdress Address {get;set;}
+        public DeliveryAdress Address {get;set;} = new DeliveryAdress();
 
          public ICollection<Order> Orders {get;set;} 
 

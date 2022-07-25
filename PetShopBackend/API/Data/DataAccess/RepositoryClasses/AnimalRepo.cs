@@ -26,6 +26,7 @@ namespace API.Data.DataAccess.RepositoryClasses
         public async Task<Animal> GetAnimalEagerAsync(int id)
         {
             return await _context.Animals
+            //.AsNoTracking() //this could screw me over. might need 2 versions. 
             .Include(x=>x.images)
             .FirstOrDefaultAsync(x=>x.Id == id);
         }
@@ -39,7 +40,11 @@ namespace API.Data.DataAccess.RepositoryClasses
 
         public async Task<IEnumerable<Animal>> GetCategoryAnimalsAsync(string category){
 
-            return await _context.Animals.Include(x=>x.images).Where(x=>x.Category == category).ToListAsync();
+            return await _context.Animals
+            .AsNoTracking()
+            .Include(x=>x.images)
+            .Where(x=>x.Category == category)
+            .ToListAsync();
             
         }
 

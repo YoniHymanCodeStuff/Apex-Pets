@@ -21,7 +21,7 @@ namespace API.Data.Model
 
         public string Email {get;set;} = "John@gmail.com";
 
-        public Photo Avatar { get; set;}
+        public Photo Avatar { get; set;} 
         public string UserType { get; internal set; } 
     }
 }

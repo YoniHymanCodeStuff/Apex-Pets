@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using API.Data.DataAccess.UnitOfWork;
 using API.Data.DTOs;
 using API.Data.Model;
+using API.Extensions;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
@@ -55,7 +56,12 @@ namespace API.Controllers
         public async Task<ActionResult> RemoveFromCart(CartRemoveDto dto)
         {
             
-            var user = (await _uow.customers.GetCustomerForUpdates(dto.username)).Value;
+            var username = User.GetUserName();
+
+            //I don't need the dto as the arg here, just a shopping cart item. 
+            //should fix that at cleanup. 
+
+            var user = (await _uow.customers.GetCustomerForUpdates(username)).Value;
 
             //var parsedItem = (ShoppingCartItem)dto.item;
 
@@ -71,9 +77,10 @@ namespace API.Controllers
             return BadRequest("Failed to remove item from cart");
         }
 
-        [HttpDelete("Checkout/{username}")]
-        public async Task<ActionResult> Checkout(string username)
+        [HttpDelete("Checkout")]
+        public async Task<ActionResult> Checkout()
         {
+            var username = User.GetUserName();
             
             var user = (await _uow.customers.GetCustomerForUpdates(username)).Value;
 
@@ -107,23 +114,25 @@ namespace API.Controllers
 
         }
 
-        [HttpGet("CartAnimals/{customerName}")]
-        public async Task<ActionResult<ICollection<CartAnimalDto>>> GetCartAnimalsAsync(string customerName)
+        [HttpGet("CartAnimals")]
+        public async Task<ActionResult<ICollection<CartAnimalDto>>> GetCartAnimalsAsync()
         {
-            //this is not secure currently... 
+             
+            var username = User.GetUserName();
             
-            var cartAnimals = await _uow.animals.GetCartAnimals(customerName);
+            var cartAnimals = await _uow.animals.GetCartAnimals(username);
             
             return Ok(cartAnimals);
 
         }
 
-        [HttpGet("orders/{customerName}")]
-        public async Task<ActionResult<ICollection<OrderDto>>> GetOrders(string customerName)
+        [HttpGet("orders")]
+        public async Task<ActionResult<ICollection<OrderDto>>> GetOrders()
         {
-            //this is not secure currently... 
             
-            var orders = await _uow.customers.GetCustomerOrders(customerName);
+            var username = User.GetUserName();
+                      
+            var orders = await _uow.customers.GetCustomerOrders(username);
             
             var orderDtos = _mapper.Map<ICollection<OrderDto>>(orders);
 

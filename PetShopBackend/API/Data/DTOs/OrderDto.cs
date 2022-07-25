@@ -7,6 +7,7 @@ namespace API.Data.DTOs
 {
     public class OrderDto
     {
+        public int Id { get; set; }
         public string OrderTimeStamp { get; set; }
         public string OrderStatus { get; set; }
         

@@ -10,7 +10,9 @@ namespace API.Data.DataAccess.UnitOfWork
     {
         IAnimalRepo animals {get;}
         IAdminRepo admins {get;}
+        IPhotoRepo photos {get;}
         ICustomerRepo customers{get;}
+
 
         IUserRepo users{get;} 
 
