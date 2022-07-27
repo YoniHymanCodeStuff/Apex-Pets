@@ -51,8 +51,8 @@ namespace PetShop.PetShopBackend.API.Controllers
                 UserName = registerDto.Username,
                 hash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(registerDto.Password)),
                 salt = hmac.Key,
-                Avatar = photo
-                
+                Avatar = photo,
+                Email = registerDto.Email
             };
  
             _uow.customers.Add(customer);
