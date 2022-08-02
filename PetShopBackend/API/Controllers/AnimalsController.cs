@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.Mvc;
 using API.utilities;
 using API.Controllers;
 using API.Data.DTOs;
+using API.helpers;
+using API.Extensions;
+using AutoMapper;
 
 namespace PetShop.PetShopBackend.API.Controllers
 {
@@ -17,20 +20,32 @@ namespace PetShop.PetShopBackend.API.Controllers
     {
         
         private readonly IUoW _uow;
-        
-        public AnimalsController(IUoW uow)
+        private readonly IMapper _mapper;
+
+        public AnimalsController(IUoW uow, IMapper mapper )
         {
             _uow = uow;
-                                    
+            _mapper = mapper;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Animal>>> GetAnimals()
         {
             var animals = await _uow.animals.GetAllAsync();
+            
             return Ok(animals);
             
         }
+
+        [HttpGet("Paginated")]
+        public async Task<ActionResult<PagedList<Animal>>> GetPaginatedAnimals([FromQuery] AnimalQueryParams queryParams)
+        {
+            var animals = await _uow.animals.GetPagedAnimalsAsync(queryParams);
+
+            Response.AddPaginationHeader(animals.CurrentPage, animals.Pagesize,animals.TotalItems,animals.TotalPages);
+
+            return Ok(animals);
+        } 
 
 
 
@@ -88,6 +103,48 @@ namespace PetShop.PetShopBackend.API.Controllers
             }
             
             return BadRequest("Failed to update animal");
+        }
+
+        [HttpPost("NewAnimal")]
+        public async Task<ActionResult> AddNewAnimal(CreateAnimalDto dto)
+        {
+            //add authorization
+
+            var animal = _mapper.Map<Animal>(dto);
+
+            _uow.animals.Add(animal);
+
+            if(await _uow.Complete())
+            {
+                return NoContent();
+            }
+            
+            return BadRequest("Failed to add animal to database");
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> RemoveAnimal(int id){
+            await _uow.animals.RemoveByIdAsync(id);
+
+            if(await _uow.Complete())
+            {
+                return NoContent();
+            }
+            
+            return BadRequest("Failed to delete product from database");
+        }
+
+        [HttpDelete("Archive/{id}")]
+        public async Task<ActionResult> ArchiveAnimal(int id){
+            
+            await _uow.animals.ArchiveAnimalAsync(id);
+
+            if(await _uow.Complete())
+            {
+                return NoContent();
+            }
+            
+            return BadRequest("Failed to archive product");
         }
 
     }

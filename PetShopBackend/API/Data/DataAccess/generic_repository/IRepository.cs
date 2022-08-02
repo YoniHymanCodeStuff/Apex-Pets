@@ -20,6 +20,7 @@ namespace API.Data.DataAccess.generic_repository
         void AddRange(IEnumerable<TEntity> entities);
 
         void Remove(TEntity entity);
+
         void RemoveRange(IEnumerable<TEntity> entities);
 
         public void Reload(TEntity entity);

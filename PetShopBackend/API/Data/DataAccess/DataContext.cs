@@ -38,6 +38,7 @@ namespace API.Data.DataAccess
             .Property(e => e.UserType)
             .HasMaxLength(20)
             .HasColumnName("User_type");
+
         }
     }
 }

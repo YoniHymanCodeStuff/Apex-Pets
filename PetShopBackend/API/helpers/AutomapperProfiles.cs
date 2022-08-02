@@ -27,6 +27,8 @@ namespace API.helpers
        CreateMap<Order,OrderDto>()
        .ForMember(dest=>dest.OrderTimeStamp, opt=>opt.MapFrom(src=>FormatDate(src.OrderTimeStamp)))
        .ForMember(dest=>dest.DeliveryTimeStamp, opt=>opt.MapFrom(src=>FormatDate(src.DeliveryTimeStamp)));
+    
+      CreateMap<CreateAnimalDto,Animal>();
      }   
 
      private string FormatDate(DateTime dt)

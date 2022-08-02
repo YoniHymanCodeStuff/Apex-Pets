@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using API.Data.DataAccess.generic_repository;
 using API.Data.DTOs;
 using API.Data.Model;
+using API.helpers;
 
 namespace API.Data.DataAccess.RepositoryInterfaces
 {
@@ -19,5 +20,11 @@ namespace API.Data.DataAccess.RepositoryInterfaces
         Task<IEnumerable<CartAnimalDto>> GetCartAnimals(string username);
 
         Task<IEnumerable<Animal>> GetAnimalsForCheckout(Customer customer);
+
+        Task<PagedList<Animal>> GetPagedAnimalsAsync(AnimalQueryParams queryParams);
+
+        Task RemoveByIdAsync(int id);
+
+        Task ArchiveAnimalAsync(int id);
     }
 }

@@ -6,6 +6,7 @@ using API.Data.DataAccess.generic_repository;
 using API.Data.DataAccess.RepositoryInterfaces;
 using API.Data.DTOs;
 using API.Data.Model;
+using API.helpers;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using static API.utilities.utils;
@@ -43,7 +44,8 @@ namespace API.Data.DataAccess.RepositoryClasses
             return await _context.Animals
             .AsNoTracking()
             .Include(x=>x.images)
-            .Where(x=>x.Category == category)
+            .Where(x=>x.Category == category 
+            && !x.IsArchived)
             .ToListAsync();
             
         }
@@ -88,6 +90,29 @@ namespace API.Data.DataAccess.RepositoryClasses
             return cartAnimals;
         }
 
+        public async Task<PagedList<Animal>> GetPagedAnimalsAsync(AnimalQueryParams queryParams)
+        {
+            var query = 
+            
+             _context.Animals.Where(x=>!x.IsArchived).AsNoTracking();
 
+             return await PagedList<Animal>.CreateAsync(query,queryParams.Pagenumber,queryParams.PageSize);
+        }
+
+        public async Task RemoveByIdAsync(int id)
+        {
+            var animal = await _context.Animals.Include(x=>x.images).FirstOrDefaultAsync(x=>x.Id==id);
+
+            _context.Animals.Remove(animal); //couldn't find the async version  of this. kind of foggy on when you need it to be async here... 
+        }
+
+        public async Task ArchiveAnimalAsync(int id)
+        {
+            var animal = await _context.Animals.FirstOrDefaultAsync(x=>x.Id==id);
+
+            animal.IsArchived = true;
+            
+            //I think it auto updates here... 
+        }
     }
 }
