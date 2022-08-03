@@ -22,7 +22,7 @@ namespace API.Extensions
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase
             };
 
-            response.Headers.Add("Pagination",JsonSerializer.Serialize(header,options));
+            response.Headers.Add("pagination",JsonSerializer.Serialize(header,options));
             response.Headers.Add("Access-Control-Expose-Headers","Pagination");//this is telling cors to allow this header access. 
 
         }

@@ -18,11 +18,11 @@ namespace PetShop.PetShopBackend.API.Controllers
 
     public class AnimalsController : BaseApiController
     {
-        
+
         private readonly IUoW _uow;
         private readonly IMapper _mapper;
 
-        public AnimalsController(IUoW uow, IMapper mapper )
+        public AnimalsController(IUoW uow, IMapper mapper)
         {
             _uow = uow;
             _mapper = mapper;
@@ -32,20 +32,12 @@ namespace PetShop.PetShopBackend.API.Controllers
         public async Task<ActionResult<IEnumerable<Animal>>> GetAnimals()
         {
             var animals = await _uow.animals.GetAllAsync();
-            
+
             return Ok(animals);
-            
+
         }
 
-        [HttpGet("Paginated")]
-        public async Task<ActionResult<PagedList<Animal>>> GetPaginatedAnimals([FromQuery] AnimalQueryParams queryParams)
-        {
-            var animals = await _uow.animals.GetPagedAnimalsAsync(queryParams);
 
-            Response.AddPaginationHeader(animals.CurrentPage, animals.Pagesize,animals.TotalItems,animals.TotalPages);
-
-            return Ok(animals);
-        } 
 
 
 
@@ -53,55 +45,69 @@ namespace PetShop.PetShopBackend.API.Controllers
         public async Task<ActionResult<IEnumerable<string>>> GetAnimalCategories()
         {
             var cates = await _uow.animals.GetCategoriesAsync();
-            
+
             // foreach (var i in cates)
             // {
             //     utils.DebugMsg(i);
             // }     
 
             return Ok(cates);
-            
+
+        }
+
+        [HttpGet("Paginated")]
+        public async Task<ActionResult<PagedList<Animal>>> GetPaginatedAnimals([FromQuery] AnimalQueryParams queryParams)
+        {
+            var animals = await _uow.animals.GetPagedAnimalsAsync(queryParams);
+
+            Response.AddPaginationHeader(animals.CurrentPage, animals.Pagesize, animals.TotalItems, animals.TotalPages);
+
+            return Ok(animals);
         }
 
         [HttpGet("Categories/{category}")]
-        public async Task<ActionResult<IEnumerable<Animal>>> GetAnimalsByCategory(string category)
+        public async Task<ActionResult<IEnumerable<Animal>>> GetAnimalsByCategory(string category,[FromQuery] AnimalQueryParams queryParams)
         {
-                        
-            var CategoryAnimals = await _uow.animals.GetCategoryAnimalsAsync(category);
-             
-            return Ok(CategoryAnimals);
 
-            
+            var animals = await _uow.animals.GetCategoryAnimalsAsync(category,queryParams);
+
+            Response.AddPaginationHeader(animals.CurrentPage, animals.Pagesize, animals.TotalItems, animals.TotalPages);
+
+
+            return Ok(animals);
+
+
         }
 
 
-        [HttpGet("{id}",Name = "GetAnimal")]
+        [HttpGet("{id}", Name = "GetAnimal")]
         public async Task<ActionResult<Animal>> GetAnimal(int id)
         {
-                        
+
             var animal = await _uow.animals.GetAnimalEagerAsync(id);
 
-                         
+
             return animal;
 
-            
+
         }
 
         [HttpPut]
-        public async Task<ActionResult<Animal>> UpdateAnimal(Animal animal){
+        public async Task<ActionResult<Animal>> UpdateAnimal(Animal animal)
+        {
             //first check if user is admin and if not return access denied. 
 
             // var anim = await _uow.animals.GetAsync(animal.Id);
 
             // anim = animal;
-            
+
             _uow.animals.Update(animal);
 
-            if(await _uow.Complete())
+            if (await _uow.Complete())
             {
                 return NoContent();
             }
-            
+
             return BadRequest("Failed to update animal");
         }
 
@@ -114,36 +120,38 @@ namespace PetShop.PetShopBackend.API.Controllers
 
             _uow.animals.Add(animal);
 
-            if(await _uow.Complete())
+            if (await _uow.Complete())
             {
                 return NoContent();
             }
-            
+
             return BadRequest("Failed to add animal to database");
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> RemoveAnimal(int id){
+        public async Task<ActionResult> RemoveAnimal(int id)
+        {
             await _uow.animals.RemoveByIdAsync(id);
 
-            if(await _uow.Complete())
+            if (await _uow.Complete())
             {
                 return NoContent();
             }
-            
+
             return BadRequest("Failed to delete product from database");
         }
 
         [HttpDelete("Archive/{id}")]
-        public async Task<ActionResult> ArchiveAnimal(int id){
-            
+        public async Task<ActionResult> ArchiveAnimal(int id)
+        {
+
             await _uow.animals.ArchiveAnimalAsync(id);
 
-            if(await _uow.Complete())
+            if (await _uow.Complete())
             {
                 return NoContent();
             }
-            
+
             return BadRequest("Failed to archive product");
         }
 

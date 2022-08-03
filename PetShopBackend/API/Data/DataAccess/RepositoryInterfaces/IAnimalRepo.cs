@@ -15,7 +15,7 @@ namespace API.Data.DataAccess.RepositoryInterfaces
         Task<Animal> GetAnimalEagerAsync(int id);
         Task<IEnumerable<string>> GetCategoriesAsync(); 
 
-        Task<IEnumerable<Animal>> GetCategoryAnimalsAsync(string category);
+        Task<PagedList<Animal>> GetCategoryAnimalsAsync(string category,AnimalQueryParams queryParams);
 
         Task<IEnumerable<CartAnimalDto>> GetCartAnimals(string username);
 
