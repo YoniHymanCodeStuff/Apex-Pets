@@ -17,10 +17,13 @@ namespace API.helpers
             }
 
         
+         public string Category { get; set; }
+         public decimal? MaxPrice { get; set; }
+         public decimal? MinPrice { get; set; }
          
-         
+         public string OrderBy { get; set; } = "id";
+         public bool IsDescending { get; set; } 
 
-        
-        
+         public string SearchString { get; set; } 
     }
 }

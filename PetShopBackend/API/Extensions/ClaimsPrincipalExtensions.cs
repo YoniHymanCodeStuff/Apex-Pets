@@ -16,5 +16,12 @@ namespace API.Extensions
             return user.FindFirst(ClaimTypes.NameIdentifier)?.Value;// I'm looking for the NameIdentifier claim (nameid in the payload in the jwt)
         }
 
+        public static bool GetIsAdmin(this ClaimsPrincipal user){
+            var claim = user.FindFirst(x=>x.Type == "userType")?.Value;
+
+            if (claim == "Admin") return true;
+            return false; 
+        }
+
     }
 }

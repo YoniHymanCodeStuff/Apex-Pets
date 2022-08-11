@@ -25,7 +25,9 @@ namespace API.Services.authentication
         {
             //who the user is claiming to be. and sets the claim name id as user.username: 
             var claims = new List<Claim>{
-                new Claim(JwtRegisteredClaimNames.NameId, user.UserName) 
+                new Claim(JwtRegisteredClaimNames.NameId, user.UserName), 
+                new Claim("userType",user.UserType)
+                 
             };
 
             //this defines the key and algorithm to create the token signature: 
