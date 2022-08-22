@@ -13,6 +13,8 @@ namespace API.Data.DataAccess.UnitOfWork
         IPhotoRepo photos {get;}
         ICustomerRepo customers{get;}
 
+        IOrderRepo orders{get;}
+
 
         IUserRepo users{get;} 
 

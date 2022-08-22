@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace API.helpers
 {
-    public class AnimalQueryParams
+    public class OrderQueryParams
     {
         private const int _maxPageSize = 50; 
 
@@ -15,14 +15,16 @@ namespace API.helpers
             get=>_pageSize;
             set=> _pageSize =  Math.Min(_maxPageSize,value);
             }
-        
-         public string Category { get; set; }
-         public decimal? MaxPrice { get; set; }
-         public decimal? MinPrice { get; set; }
-         
-         public string OrderBy { get; set; } = "id";
-         public bool IsDescending { get; set; } 
 
-         public string SearchString { get; set; } 
+        public string SearchString { get; set; }
+        public bool IsDescending { get; set; } = false; 
+        public string OrderBy { get; set; } = "OrderTimeStamp";
+
+        public DateTime? EarliestDate {get;set;}
+        public DateTime? LatestDate {get;set;} 
+
+        public string OrderStatus {get;set;}
+        
+        
     }
 }

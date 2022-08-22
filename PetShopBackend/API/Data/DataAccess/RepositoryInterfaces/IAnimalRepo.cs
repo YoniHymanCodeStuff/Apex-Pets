@@ -15,10 +15,11 @@ namespace API.Data.DataAccess.RepositoryInterfaces
         Task<Animal> GetAnimalEagerAsync(int id);
         Task<IEnumerable<string>> GetCategoriesAsync(); 
 
-        Task<PagedList<Animal>> GetCategoryAnimalsAsync(string category,AnimalQueryParams queryParams);
+        //Task<PagedList<Animal>> GetCategoryAnimalsAsync(string category,AnimalQueryParams queryParams);
 
         Task<IEnumerable<CartAnimalDto>> GetCartAnimals(string username);
 
+        Task<CartAnimalDto> GetCartAnimal(ShoppingCartItem item);
         Task<IEnumerable<Animal>> GetAnimalsForCheckout(Customer customer);
 
         Task<PagedList<Animal>> GetPagedAnimalsAsync(AnimalQueryParams queryParams);
@@ -26,5 +27,6 @@ namespace API.Data.DataAccess.RepositoryInterfaces
         Task RemoveByIdAsync(int id);
 
         Task ArchiveAnimalAsync(int id);
+        
     }
 }

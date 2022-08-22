@@ -4,7 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using API.Data.DataAccess.generic_repository;
 using API.Data.DataAccess.RepositoryInterfaces;
+using API.Data.DTOs;
 using API.Data.Model;
+using API.helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,6 +21,8 @@ namespace API.Data.DataAccess.RepositoryClasses
             _context = context;
 
         }
+
+        
 
         public async Task<ActionResult<Customer>> GetCustomerAsync(string username)
         {

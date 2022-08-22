@@ -34,30 +34,7 @@ namespace API.Data.DataAccess.RepositoryClasses
 
         public async Task<IEnumerable<string>> GetCategoriesAsync()
         {
-
-
-
             return await _context.Animals.Include(x => x.images).Select(x => x.Category).Distinct().ToListAsync();
-
-        }
-
-        public async Task<PagedList<Animal>> GetCategoryAnimalsAsync(string category, AnimalQueryParams queryParams)
-        {
-
-            var query =
-
-                     _context.Animals.Include(x => x.images).Where(x => x.Category == category
-                    && !x.IsArchived).AsNoTracking();
-
-            return await PagedList<Animal>.CreateAsync(query, queryParams.Pagenumber, queryParams.PageSize);
-
-            // return await _context.Animals
-            // .AsNoTracking()
-            // .Include(x => x.images)
-            // .Where(x => x.Category == category
-            // && !x.IsArchived)
-            // .ToListAsync();
-
         }
 
 
@@ -101,6 +78,18 @@ namespace API.Data.DataAccess.RepositoryClasses
             return cartAnimals;
         }
 
+        // public async Task<PagedList<Animal>> GetCategoryAnimalsAsync(string category, AnimalQueryParams queryParams)
+        // {
+
+        //     var query =
+
+        //              _context.Animals.Include(x => x.images).Where(x => x.Category == category
+        //             && !x.IsArchived).AsNoTracking();
+
+        //     return await PagedList<Animal>.CreateAsync(query, queryParams.Pagenumber, queryParams.PageSize);
+
+        // }
+
         public async Task<PagedList<Animal>> GetPagedAnimalsAsync(AnimalQueryParams queryParams)
         {
             var query = _context.Animals.AsQueryable();
@@ -113,7 +102,7 @@ namespace API.Data.DataAccess.RepositoryClasses
 
             if(!string.IsNullOrEmpty(queryParams.SearchString))
             {
-                query = query.Where(x=>x.Species.Contains(queryParams.SearchString));
+                query = query.Where(x=>x.Species.ToLower().Contains(queryParams.SearchString.ToLower()));
             }
 
             if(queryParams.MinPrice != null)
@@ -171,7 +160,7 @@ namespace API.Data.DataAccess.RepositoryClasses
 
             return await PagedList<Animal>.CreateAsync
             (
-                query.AsNoTracking(),
+                query.AsNoTracking().Include(x => x.images),
                 queryParams.Pagenumber,
                 queryParams.PageSize
             );
@@ -191,6 +180,18 @@ namespace API.Data.DataAccess.RepositoryClasses
             animal.IsArchived = true;
 
             //I think it auto updates here... 
+        }
+
+        public async Task<CartAnimalDto> GetCartAnimal(ShoppingCartItem item)
+        {
+            var BaseAnimal = await _context.Animals.FirstOrDefaultAsync(x=>x.Id == item.OrderedAnimalId);
+            
+            var cartAnimal = _mapper.Map<CartAnimalDto>(BaseAnimal);
+
+            cartAnimal.animalId = item.OrderedAnimalId;
+            cartAnimal.cartItemId = item.Id;
+
+            return cartAnimal;
         }
     }
 }

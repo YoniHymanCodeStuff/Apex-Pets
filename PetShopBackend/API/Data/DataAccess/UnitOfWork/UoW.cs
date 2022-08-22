@@ -28,6 +28,7 @@ namespace API.Data.DataAccess.UnitOfWork
 
         public IUserRepo users => new UserRepo(_context);
 
+        public IOrderRepo orders => new OrderRepo(_context,_mapper);
 
         public async Task<bool> Complete()
         {

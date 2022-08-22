@@ -24,6 +24,15 @@ namespace API.helpers
 
        CreateMap<Animal,CartAnimalDto>();
 
+       CreateMap<Order,OrderWithCustomerDto>()
+       .ForMember(dest=>dest.OrderId,opt=>opt.MapFrom(src=>src.Id))
+       .ForMember(dest=>dest.customerAddress,opt=>opt.MapFrom(src=>
+       $"{src.customer.Address.Country}, {src.customer.Address.City}, {src.customer.Address.Street}, {src.customer.Address.houseNumber}"))
+       .ForMember(dest=>dest.customerName,opt=>opt.MapFrom(src=>$"{src.customer.LastName}, {src.customer.FirstName}"));
+
+       
+       
+
        CreateMap<Order,OrderDto>()
        .ForMember(dest=>dest.OrderTimeStamp, opt=>opt.MapFrom(src=>FormatDate(src.OrderTimeStamp)))
        .ForMember(dest=>dest.DeliveryTimeStamp, opt=>opt.MapFrom(src=>FormatDate(src.DeliveryTimeStamp)));

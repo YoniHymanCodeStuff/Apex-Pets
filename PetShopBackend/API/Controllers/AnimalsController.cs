@@ -65,19 +65,19 @@ namespace PetShop.PetShopBackend.API.Controllers
             return Ok(animals);
         }
 
-        [HttpGet("Categories/{category}")]
-        public async Task<ActionResult<IEnumerable<Animal>>> GetAnimalsByCategory(string category,[FromQuery] AnimalQueryParams queryParams)
-        {
+        // [HttpGet("Categories/{category}")]
+        // public async Task<ActionResult<IEnumerable<Animal>>> GetAnimalsByCategory(string category,[FromQuery] AnimalQueryParams queryParams)
+        // {
 
-            var animals = await _uow.animals.GetCategoryAnimalsAsync(category,queryParams);
+        //     var animals = await _uow.animals.GetCategoryAnimalsAsync(category,queryParams);
 
-            Response.AddPaginationHeader(animals.CurrentPage, animals.Pagesize, animals.TotalItems, animals.TotalPages);
-
-
-            return Ok(animals);
+        //     Response.AddPaginationHeader(animals.CurrentPage, animals.Pagesize, animals.TotalItems, animals.TotalPages);
 
 
-        }
+        //     return Ok(animals);
+
+
+        // }
 
 
         [HttpGet("{id}", Name = "GetAnimal")]
