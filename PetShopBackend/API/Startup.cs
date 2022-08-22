@@ -27,6 +27,9 @@ using API.Middleware;
 using API.utilities;
 using API.Services.PhotoService;
 using API.helpers;
+using Newtonsoft.Json;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace API
 {
@@ -39,7 +42,7 @@ namespace API
             _config = config;
         }
 
-        
+
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -48,33 +51,36 @@ namespace API
             //services.AddApplicationServices(_config); this is a way to better 
             //organize all the things I'm using here. 
 
-            
+
             services.AddDbContext<DataContext>(options =>
             options.UseSqlite(_config.GetConnectionString("DefaultConnection"))
             );
-             
+
             services.AddScoped<IUoW, UoW>();
             services.AddScoped<ITokenService, TokenService>();
 
             services.AddAutoMapper(typeof(AutomapperProfiles).Assembly);
-            
+
             services.Configure<CloudinarySettings>(_config.GetSection("CloudinarySettings"));
-            services.AddScoped<IPhotoService,PhotoService>();
-            
+            services.AddScoped<IPhotoService, PhotoService>();
+
             //some debugging thing, I think i'm missing the package for it:
             //services.AddDatabaseDeveloperPageExceptionFilter();
-            
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
             });
 
+
             services.AddCors();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).
-            AddJwtBearer(options=>{
-                options.TokenValidationParameters = new TokenValidationParameters{
+            AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["TokenKey"])),
                     ValidateIssuer = false,
@@ -88,10 +94,10 @@ namespace API
         {
 
             app.UseMiddleware<ExceptionMiddleware>();
-            
+
             if (env.IsDevelopment())
             {
-                
+
                 //app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
@@ -101,7 +107,7 @@ namespace API
 
             app.UseRouting();
 
-            app.UseCors(policy=> policy
+            app.UseCors(policy => policy
             .AllowAnyHeader()
             .AllowAnyMethod()
             .WithOrigins("https://localhost:4200"));
@@ -114,8 +120,8 @@ namespace API
                 endpoints.MapControllers();
             });
 
-            
-            
+
+
         }
     }
 }

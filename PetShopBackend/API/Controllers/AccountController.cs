@@ -32,6 +32,32 @@ namespace PetShop.PetShopBackend.API.Controllers
             _uow = uow; 
 
         }
+        [HttpPost("CreateAdmin")]
+        public async Task<ActionResult<UserDto>> CreateAdmin(RegisterDto registerDto)
+        {
+            if (await UserExists(registerDto.Username)) return BadRequest("username not available");
+
+            using var hmac = new HMACSHA512();
+
+
+            var photo = new Photo();
+            _uow.photos.Add(photo);
+
+            var admin = new Admin
+            {
+                UserName = registerDto.Username,
+                hash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(registerDto.Password)),
+                salt = hmac.Key,
+                Avatar = photo,
+                Email = registerDto.Email
+            };
+ 
+            _uow.admins.Add(admin);
+
+            await _uow.Complete();
+
+            return new UserDto { UserName = registerDto.Username, Token = _tokenService.CreateToken(admin), IsAdmin=true };
+        }
 
         [HttpPost("Registration")]
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)

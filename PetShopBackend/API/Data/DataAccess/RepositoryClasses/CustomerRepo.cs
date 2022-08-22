@@ -28,7 +28,7 @@ namespace API.Data.DataAccess.RepositoryClasses
         {
             return await _context.Customers
             .AsNoTracking()
-            .Include(x=>x.Orders)
+            // .Include(x=>x.Orders)
             .Include(x=>x.ShoppingCart)
             .Include(a=>a.Address)
             .Include(x=>x.Avatar)
