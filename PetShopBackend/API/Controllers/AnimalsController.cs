@@ -95,11 +95,9 @@ namespace PetShop.PetShopBackend.API.Controllers
         [HttpPut]
         public async Task<ActionResult<Animal>> UpdateAnimal(Animal animal)
         {
-            //first check if user is admin and if not return access denied. 
 
-            // var anim = await _uow.animals.GetAsync(animal.Id);
+            if(!User.GetIsAdmin()){return BadRequest("Only admins can execute this action.");}
 
-            // anim = animal;
 
             _uow.animals.Update(animal);
 
@@ -114,7 +112,7 @@ namespace PetShop.PetShopBackend.API.Controllers
         [HttpPost("NewAnimal")]
         public async Task<ActionResult> AddNewAnimal(CreateAnimalDto dto)
         {
-            //add authorization
+            if(!User.GetIsAdmin()){return BadRequest("Only admins can execute this action.");}
 
             var animal = _mapper.Map<Animal>(dto);
 
@@ -131,6 +129,9 @@ namespace PetShop.PetShopBackend.API.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> RemoveAnimal(int id)
         {
+            if(!User.GetIsAdmin()){return BadRequest("Only admins can execute this action.");}
+            
+            
             await _uow.animals.RemoveByIdAsync(id);
 
             if (await _uow.Complete())
@@ -144,7 +145,8 @@ namespace PetShop.PetShopBackend.API.Controllers
         [HttpDelete("Archive/{id}")]
         public async Task<ActionResult> ArchiveAnimal(int id)
         {
-
+            if(!User.GetIsAdmin()){return BadRequest("Only admins can execute this action.");}
+            
             await _uow.animals.ArchiveAnimalAsync(id);
 
             if (await _uow.Complete())

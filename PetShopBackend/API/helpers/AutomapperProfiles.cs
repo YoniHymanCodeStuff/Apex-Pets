@@ -20,6 +20,8 @@ namespace API.helpers
 
         CreateMap<Customer,CustomerDto>();
 
+        CreateMap<Admin,BaseUserDto>();
+
        CreateMap<CustomerUpdateDto,Customer>();
 
        CreateMap<Animal,CartAnimalDto>();

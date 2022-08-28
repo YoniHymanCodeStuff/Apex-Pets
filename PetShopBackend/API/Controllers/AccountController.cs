@@ -35,6 +35,9 @@ namespace PetShop.PetShopBackend.API.Controllers
         [HttpPost("CreateAdmin")]
         public async Task<ActionResult<UserDto>> CreateAdmin(RegisterDto registerDto)
         {
+            if(!User.GetIsAdmin()){return BadRequest("Only admins can execute this action.");}
+            
+            
             if (await UserExists(registerDto.Username)) return BadRequest("username not available");
 
             using var hmac = new HMACSHA512();
@@ -109,7 +112,7 @@ namespace PetShop.PetShopBackend.API.Controllers
             }
 
             bool isAdmin = await _uow.users.CheckIfIsAdminAsync(loginDto.Username);
-
+            
 
             return new UserDto { UserName = loginDto.Username,
              Token = _tokenService.CreateToken(user),
@@ -139,29 +142,52 @@ namespace PetShop.PetShopBackend.API.Controllers
                 return NoContent();
             }
 
-            // if failed, return a bad request
-            return BadRequest("Failed to update customer profile");
-            // 5. test our api in postman, and see if it works, 
-            // * go to postman section 9
-            // * start with the login to save the token as an environment variables
-            // * and then update the user
-            // * good - 204: no content
-            // * go to member/edit in the client to see the updated data
+            return BadRequest("Failed to update profile");
+
         }
 
+        [HttpPatch("Admin")]
+        public async Task<ActionResult> UpdateAdmin(BaseUserDto dto)
+        {
+            if(!User.GetIsAdmin()){return BadRequest("Only admins can execute this action.");}
+            
+            await _uow.admins.UpdateAdmin(dto);
+
+            if(await _uow.Complete())
+            {
+                return NoContent();
+            }
+            return BadRequest("Failed to update profile");
+        }
 
         [HttpGet("Customer/{username}",Name = "GetCustomer")]
         public async Task<ActionResult<CustomerDto>> GetCustomer(string username)
         {
             
-            //should I also be getting the name from the token here? probably
-
-            var cust =  (await _uow.customers.GetCustomerAsync(username)).Value;
+            //need to et rid of the username input hee since we are just using the dat from the token
+            
+            var uusername =  User.GetUserName();
+            var cust =  (await _uow.customers.GetCustomerAsync(uusername)).Value;
 
             var custDto = _mapper.Map<CustomerDto>(cust);
 
             return custDto;
-        }  
+        } 
+
+
+        [HttpGet("Admin")]
+        public async Task<ActionResult<BaseUserDto>> GetAdmin(){
+            
+            if(!User.GetIsAdmin()){return BadRequest("Only admins can execute this action.");}
+                        
+            var admin = await _uow.admins.GetAdminAsync(User.GetUserName());
+
+            var dto = _mapper.Map<BaseUserDto>(admin);
+
+            return dto;
+        }
+
+
 
         
         public async Task<bool> GetIsUserAdmin(string username){

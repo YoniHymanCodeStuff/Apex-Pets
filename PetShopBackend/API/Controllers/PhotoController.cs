@@ -30,7 +30,7 @@ namespace API.Controllers
         public async Task<ActionResult<Photo>> AddAvatar(IFormFile file)
         {
             var username = User.GetUserName(); //using the extension method we created
-            var user = _uow.customers.Find(x=>x.UserName == username).SingleOrDefault();//this needs to be a repo function. this is an abomination. 
+            var user = _uow.users.Find(x=>x.UserName == username).SingleOrDefault();//this needs to be a repo function. this is an abomination. 
 
             //like in all my code, need to somehow incorporate admin role. 
 
@@ -48,7 +48,7 @@ namespace API.Controllers
 
             user.Avatar = photo;
 
-            _uow.customers.Update(user);
+            // _uow.users.Update(user);
 
             //need to add something here that indicates when you are replacing an existing image. 
 
@@ -69,6 +69,9 @@ namespace API.Controllers
         [HttpPost("animal-photo/{animalId}")]
         public async Task<ActionResult<Photo>> AddAnimalPhoto(int animalId,IFormFile file)
         {
+            
+            if(!User.GetIsAdmin()){return BadRequest("Only admins can execute this action.");}
+            
             
             Animal animal = await _uow.animals.GetAnimalEagerAsync(animalId);
             
@@ -107,12 +110,7 @@ namespace API.Controllers
         [HttpPut("SetMainPhoto")]//I need to pass the animal, and the photoId. 
         public async Task<ActionResult> SetMainPhoto(SetPhotoDto dto)
         {
-            // var username = User.GetUserName();
-            // if (!await _uow.users.CheckIfIsAdminAsync(username))
-            // {
-            //     return BadRequest("You are not really an admin are you? maybe you should stop poking around where you don't belong... ");
-            // }
-            //the above should be a function. seems a shame to repeat this whole thing. not sure where I can easily reach this claims.user thing. don't get thow that works. 
+            if(!User.GetIsAdmin()){return BadRequest("Only admins can execute this action.");}
 
             var animal = await _uow.animals.GetAnimalEagerAsync(dto.AnimalId);
 
@@ -143,7 +141,7 @@ namespace API.Controllers
             //can I just create an inpedenpant deletion thing? 
             //Do I need to also make sure the linked entities know they have been 
             //deleted? we will see. 
-
+            
 
             //also, need to add verfication for deleting an animal's photo. 
         

@@ -152,6 +152,8 @@ namespace API.Controllers
         public async Task<ActionResult<PagedList<OrderWithCustomerDto>>> GetAllOrders([FromQuery] OrderQueryParams queryParams)
         {
 
+            if(!User.GetIsAdmin()){return BadRequest("Only admins may access this data.");}
+            
             var orders = await _uow.orders.GetAllOrders(queryParams);
 
             Response.AddPaginationHeader(orders.CurrentPage, orders.Pagesize, orders.TotalItems, orders.TotalPages);
@@ -163,6 +165,8 @@ namespace API.Controllers
         [HttpPatch("updateStatus")]
         public async Task<ActionResult<OrderWithCustomerDto>> UpdateOrderStatus(orderStatusUpdateDto dto)
         {
+            if(!User.GetIsAdmin()){return BadRequest("Only admins can execute this action.");}
+
 
             var updated = await _uow.orders.UpdateOrderStatus(dto);
 

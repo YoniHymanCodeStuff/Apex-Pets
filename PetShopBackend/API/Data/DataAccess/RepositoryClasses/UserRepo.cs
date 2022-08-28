@@ -23,7 +23,7 @@ namespace API.Data.DataAccess.RepositoryClasses
         {
             
             return  await  _context.Users.Where(x=>x.UserName == username)
-            .Select(x=>x.UserType).SingleOrDefaultAsync() == "admin";
+            .Select(x=>x.UserType).SingleOrDefaultAsync() == "Admin";
 
             // var user = await  _context.Users.SingleOrDefaultAsync(x=> x.UserName == username);
 
