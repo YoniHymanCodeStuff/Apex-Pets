@@ -134,7 +134,7 @@ namespace API.Data.DataAccess.RepositoryClasses
                     break;
 
                     case "price":
-                    query =query.OrderBy(x=>x.price);
+                    query =query.OrderBy(x=>(float)x.price);
                     break;
 
                     case "required_Habitat":

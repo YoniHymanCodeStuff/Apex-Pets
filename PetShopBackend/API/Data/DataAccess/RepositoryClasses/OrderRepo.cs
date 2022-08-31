@@ -75,7 +75,7 @@ namespace API.Data.DataAccess.RepositoryClasses
                     break;
                
                     case "price":
-                    query =query.OrderBy(x=>x.price);
+                    query =query.OrderBy(x=>(double)x.price);
                     break;
 
                     case "OrderStatus":
