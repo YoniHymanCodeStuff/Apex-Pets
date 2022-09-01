@@ -93,7 +93,7 @@ namespace PetShop.PetShopBackend.API.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult<Animal>> UpdateAnimal(Animal animal)
+        public async Task<ActionResult> UpdateAnimal(Animal animal)
         {
 
             if(!User.GetIsAdmin()){return BadRequest("Only admins can execute this action.");}
