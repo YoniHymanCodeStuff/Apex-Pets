@@ -1,10 +1,10 @@
 [
   {
     "Id": 1,
-    "Species": "April",
+    "Name": "Shark",
+    "Species": "Sharku sharkocerous",
     "Category": "aquatic",
     "Required_Habitat": "Habitat blah blah",
-    "Required_License": "C",
     "Description": "This animal blah blah blah",
     "images": [
       {

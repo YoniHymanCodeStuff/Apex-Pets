@@ -66,8 +66,8 @@ namespace API.Data.DataAccess.RepositoryClasses
                     query = query.OrderBy(x=>x.Id);
                     break;
            
-                    case "species":
-                    query =query.OrderBy(x=>x.OrderedAnimalSpecies);
+                    case "name":
+                    query =query.OrderBy(x=>x.OrderedAnimalName);
                     break;
 
                     case "OrderedAnimalId":

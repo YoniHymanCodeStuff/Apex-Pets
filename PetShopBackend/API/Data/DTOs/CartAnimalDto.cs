@@ -12,11 +12,12 @@ namespace API.Data.DTOs
         public int cartItemId { get; set; }
 
         public int animalId {get;set;}
-        public string Species { get; set; }
+        public string Name { get; set; }
 
+        public string Species { get; set; }
         public Photo MainPhoto {get;set; }
 
-        public string Required_License { get; set; }
+
 
         public decimal price { get; set; }
                   

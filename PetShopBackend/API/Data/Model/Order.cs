@@ -19,7 +19,7 @@ namespace API.Data.Model
 
         public int OrderedAnimalId { get; set; }
 
-        public string OrderedAnimalSpecies {get;set;}
+        public string OrderedAnimalName {get;set;}
 
         public decimal price { get; set; }
         

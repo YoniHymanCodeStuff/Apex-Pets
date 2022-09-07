@@ -102,7 +102,7 @@ namespace API.Data.DataAccess.RepositoryClasses
 
             if(!string.IsNullOrEmpty(queryParams.SearchString))
             {
-                query = query.Where(x=>x.Species.ToLower().Contains(queryParams.SearchString.ToLower()));
+                query = query.Where(x=>x.Name.ToLower().Contains(queryParams.SearchString.ToLower()));
             }
 
             if(queryParams.MinPrice != null)
@@ -125,8 +125,8 @@ namespace API.Data.DataAccess.RepositoryClasses
                     query = query.OrderBy(x=>x.Id);
                     break;
            
-                    case "species":
-                    query =query.OrderBy(x=>x.Species);
+                    case "name":
+                    query =query.OrderBy(x=>x.Name);
                     break;
        
                     case "category":
@@ -141,8 +141,8 @@ namespace API.Data.DataAccess.RepositoryClasses
                     query =query.OrderBy(x=>x.Required_Habitat);
                     break;
 
-                    case "required_License":
-                    query =query.OrderBy(x=>x.Required_License);
+                    case "species":
+                    query =query.OrderBy(x=>x.Species);
                     break;
 
                     case "description":

@@ -16,7 +16,7 @@ namespace API.Data.DTOs
 
         public int OrderedAnimalId { get; set; }
 
-        public string OrderedAnimalSpecies {get;set;}
+        public string OrderedAnimalName {get;set;}
 
         public decimal price { get; set; }
 

@@ -104,7 +104,7 @@ namespace API.Controllers
                     OrderTimeStamp = DateTime.Now,
                     OrderStatus = "Pending",
                     OrderedAnimalId = animal.Id,
-                    OrderedAnimalSpecies = animal.Species,
+                    OrderedAnimalName = animal.Name,
                     price = animal.price
                 });
 

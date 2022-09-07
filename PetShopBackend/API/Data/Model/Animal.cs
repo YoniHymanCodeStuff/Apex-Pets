@@ -10,14 +10,15 @@ namespace API.Data
     {
 
         public int Id { get; set; }
-        public string Species { get; set; }
+        public string Name { get; set; }
 
+        public string Species { get; set; }
         public string Category { get; set; }
         public Photo MainPhoto {get;set; }
 
         public string Required_Habitat { get; set; }
 
-        public string Required_License { get; set; }
+        
 
         public string Description { get; set; }
 
