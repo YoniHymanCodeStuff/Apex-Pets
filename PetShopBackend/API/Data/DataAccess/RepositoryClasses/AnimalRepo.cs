@@ -160,7 +160,8 @@ namespace API.Data.DataAccess.RepositoryClasses
 
             return await PagedList<Animal>.CreateAsync
             (
-                query.AsNoTracking().Include(x => x.images),
+                query.AsNoTracking().Include(x => x.images)
+                .Include(x=>x.MainPhoto),
                 queryParams.Pagenumber,
                 queryParams.PageSize
             );

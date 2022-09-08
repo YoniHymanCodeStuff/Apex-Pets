@@ -1,282 +1,226 @@
 [
   {
     "Id": 1,
-    "Name": "Shark",
-    "Species": "Sharku sharkocerous",
+    "Name": "Great white shark",
+    "Species": "Carcharodon carcharias",
     "Category": "aquatic",
-    "Required_Habitat": "Habitat blah blah",
-    "Description": "This animal blah blah blah",
+    "Required_Habitat": "1 million gallon aquarium",
+    "Description": "The great white shark is an apex predator, as it has no known natural predators other than, on very rare occasions, the orca. It is arguably the world's largest-known extant macropredatory fish, and is one of the primary predators of marine mammals, up to the size of large baleen whales. This shark is also known to prey upon a variety of other marine animals, including fish, and seabirds. It is the only known surviving species of its genus Carcharodon, and is responsible for more recorded human bite incidents than any other shark.",
+    "price":1080000,
     "images": [
       {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662560572/wr2x4jcjjk4y9v2ea195.jpg",
+        "Description": "shark pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662560576/vwtjlfvis8p4iniaxvws.webp",
+        "Description": "shark pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662560569/ygcm3yt1bte2w0uemjoi.webp",
+        "Description": "shark pic3."
       }
     ]
   },
   {
     "Id": 2,
-    "Species": "Lindsay",
-    "Category": "reptilians",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "A",
-    "Description": "This animal blah blah blah",
+    "Name": "Bull Shark",
+    "Species": "Carcharhinus leucas",
+    "Category": "aquatic",
+    "Required_Habitat": "380,000 gallon aquarium",
+    "Description": "Bull sharks are aggressive, common, and usually live near high-population areas like tropical shorelines. They are not bothered by brackish and freshwater, and even venture far inland via rivers and tributaries.",
+    "price":500000,
     "images": [
       {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
-      }
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662566468/ce76mzez7reeh41x6clg.jpg",
+        "Description": "shark pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662566463/yqoyrqknbzmae9jjkpwy.webp",
+        "Description": "shark pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662566459/stb0gfqlxra0q7ndsrsp.jpg",
+        "Description": "shark pic3."
+      },
+      {"PhotoUrl":"https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662566456/og6ebppgrsjxpokfrczk.webp",
+      "Description": "shark pic4."
+    }
     ]
   },
   {
     "Id": 3,
-    "Species": "Corrine",
-    "Category": "mammalia",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "A",
-    "Description": "This animal blah blah blah",
+    "Name": "Orca",
+    "Species": "Orcinus orca",
+    "Category": "aquatic",
+    "Required_Habitat": "1 million gallon aquarium",
+    "Description": "The orca or killer whale (Orcinus orca) is a toothed whale belonging to the oceanic dolphin family, of which it is the largest member. It is recognizable by its black-and-white patterned body. A cosmopolitan species, orcas can be found in all of the world's oceans in a variety of marine environments, from Arctic and Antarctic regions to tropical seas.",
+    "price":1000000,
     "images": [
       {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662567492/agrp6k7vbol5tkw7y324.jpg",
+        "Description": "orca pic."
+      }, 
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662567488/igfnwifj1gpxukgigxur.webp",
+        "Description": "orca pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662567486/pycabp02ybv2jsqqq48e.webp",
+        "Description": "orca pic3."
       }
     ]
   },
   {
     "Id": 4,
-    "Species": "Collier",
-    "Category": "avians",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "C",
-    "Description": "This animal blah blah blah",
+    "Name": "Giant squid",
+    "Species": "Architeuthis dux",
+    "Category": "aquatic",
+    "Required_Habitat": "750 thousand gallon aquarium",
+    "Description": "The giant squid remains largely a mystery to scientists despite being the biggest invertebrate on Earth. The largest of these elusive giants ever found measured 59 feet in length and weighed nearly a ton.",
+    "price":140000,
     "images": [
       {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662574261/jgqboddgk4g3czc2gc2c.webp",
+        "Description": "squid pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662574259/sxmdr1nhtvb0k0r0qaht.webp",
+        "Description": "squid pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662574265/dr148adpk1htga63rg4z.jpg",
+        "Description": "squid pic3."
       }
     ]
   },
   {
     "Id": 5,
-    "Species": "Josefina",
-    "Category": "mammalia",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "A",
-    "Description": "This animal blah blah blah",
+    "Name": "Yellow sea snake",
+    "Species": "Hydrophis spiralis",
+    "Category": "reptilian",
+    "Required_Habitat": "2000 gallon aquarium",
+    "Description": "The yellow sea snake (Hydrophis platurus) is a venomous species of snake from the subfamily Hydrophiinae (the sea snakes) found in tropical oceanic waters around the world except for the Atlantic Ocean. For many years, it was placed in the monotypic genus Pelamis, but recent molecular evidence indicates it lies within the genus Hydrophis.",
+    "price":850,
     "images": [
       {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662575600/yrc1kqpvs0wrhhdb95qh.jpg",
+        "Description": "snake pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662575598/iht1icacus17uezjsjqb.jpg",
+        "Description": "snake pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662575595/brqc9dva4i2k3pdkxde7.jpg",
+        "Description": "snake pic3."
       }
     ]
   },
   {
     "Id": 6,
-    "Species": "Webster",
-    "Category": "avians",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "A",
-    "Description": "This animal blah blah blah",
+    "Name": "Giant Oarfish",
+    "Species": "Regalecus glesne",
+    "Category": "aquatic",
+    "Required_Habitat": "1500 gallon aquarium",
+    "Description": "The giant oarfish (Regalecus glesne) is a species of oarfish of the family Regalecidae. It is an oceanodromous species with a worldwide distribution, excluding polar regions. Other common names include Pacific oarfish, king of herrings, ribbonfish, and streamer fish.[3]",
+    "price":3000,
     "images": [
       {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662576713/e9hnsys4aigrw8wxxlnw.webp",
+        "Description": "oarfish pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662576710/jqb7hwmta3apz4jazp0c.webp",
+        "Description": "oarfish pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662576708/vcirqoj6q4ugakynnlzv.jpg",
+        "Description": "oarfish pic3."
       }
     ]
   },
   {
     "Id": 7,
-    "Species": "Heath",
-    "Category": "avians",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "C",
-    "Description": "This animal blah blah blah",
+    "Name": "Giant Pacific Octopus",
+    "Species": "Enteroctopus dofleini",
+    "Category": "aquatic",
+    "Required_Habitat": "2000 gallon aquarium",
+    "Description": "The giant Pacific octopus is considered the largest octopus species in the world and inhabits the northern Pacific Ocean off the United States up to Alaska and around Japan. The largest individual on record weighed an impressive 600 pounds and measured 30 feet across in length. On average, though, these octopuses weigh closer to 110 pounds and measure 16 feet across once fully grown. Like other octopuses, the giant Pacific octopus is extremely intelligent and has been observed opening jars and mimicking other species.",
+    "price":10000,
     "images": [
       {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662577665/sw13y1xdkld7wgvbujnq.jpg",
+        "Description": "octo pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662577663/o7984fpqjm1d7dymd2vq.jpg",
+        "Description": "octo pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662577661/ksmahr0neink5pfg2mot.jpg",
+        "Description": "octo pic3."
       }
     ]
   },
   {
     "Id": 8,
-    "Species": "Merritt",
+    "Name": "Stonefish",
+    "Species": "Synanceia",
     "Category": "aquatic",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "C",
-    "Description": "This animal blah blah blah",
+    "Required_Habitat": "400 gallon aquarium",
+    "Description": "Synanceia is a genus of ray-finned fish belonging to the subfamily Synanceiinae, the stonefishes, which is classified within the family Scorpaenidae, the scorpionfishes and relatives. Stonefishes are venomous, dangerous, and fatal to humans. They are the most venomous fish known.[2][3] They are found in the coastal regions of the Indo-Pacific.",
+    "price":400,
     "images": [
       {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662578616/fcy1j7xywlx5nna4wpvc.jpg",
+        "Description": "stone pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662578614/sgd963oqaaf2yibmissn.jpg",
+        "Description": "stone pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662578611/ntmc6tqxxhoq7440x8om.jpg",
+        "Description": "stone pic3."
       }
     ]
   },
   {
     "Id": 9,
-    "Species": "Deanna",
-    "Category": "reptilians",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "C",
-    "Description": "This animal blah blah blah",
+    "Name": "Box jellyfish",
+    "Species": "Medusozoa Cubozoa",
+    "Category": "aquatic",
+    "Required_Habitat": "1000 gallon aquarium",
+    "Description": "Box jellyfish are cnidarian invertebrates distinguished by their box-like (i.e. cube-shaped) body. Some species of box jellyfish produce potent venom delivered by contact with their tentacles. Stings from some species, including Chironex fleckeri, Carukia barnesi, Malo kingi, and a few others, are extremely painful and often fatal to humans.",
+    "price":200,
     "images": [
       {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662579265/f52umvxqb6j7f4obntp7.webp",
+        "Description": "jellyfish pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662579189/z4nd3ootucdv74fvt6yo.jpg",
+        "Description": "jellyfish pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662579183/hateody3dpdqxyjcxuju.png",
+        "Description": "jellyfish pic3."
       }
     ]
   },
   {
     "Id": 10,
-    "Species": "Erika",
+    "Name": "Great hammerhead",
+    "Species": "Sphyrna mokarran",
     "Category": "aquatic",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "A",
-    "Description": "This animal blah blah blah",
+    "Required_Habitat": "1 million gallon aquarium",
+    "Description": "The great hammerhead (Sphyrna mokarran) is the largest species of hammerhead shark, belonging to the family Sphyrnidae, attaining an average length of 4.6 m (15 ft) and reaching a maximum length of 6.1 m (20 ft). It is found in tropical and warm temperate waters worldwide, inhabiting coastal areas and the continental shelf. ",
+    "price":1600000,
     "images": [
       {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
-      }
-    ]
-  },
-  {
-    "Id": 11,
-    "Species": "Sheena",
-    "Category": "aquatic",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "B",
-    "Description": "This animal blah blah blah",
-    "images": [
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662579919/mih63nfrekmpctulygyk.jpg",
+        "Description": "shark pic."
+      },
       {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
-      }
-    ]
-  },
-  {
-    "Id": 12,
-    "Species": "Millicent",
-    "Category": "avians",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "B",
-    "Description": "This animal blah blah blah",
-    "images": [
-      {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
-      }
-    ]
-  },
-  {
-    "Id": 13,
-    "Species": "Gentry",
-    "Category": "reptilians",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "B",
-    "Description": "This animal blah blah blah",
-    "images": [
-      {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
-      }
-    ]
-  },
-  {
-    "Id": 14,
-    "Species": "Eva",
-    "Category": "aquatic",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "B",
-    "Description": "This animal blah blah blah",
-    "images": [
-      {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
-      }
-    ]
-  },
-  {
-    "Id": 15,
-    "Species": "Janette",
-    "Category": "aquatic",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "B",
-    "Description": "This animal blah blah blah",
-    "images": [
-      {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
-      }
-    ]
-  },
-  {
-    "Id": 16,
-    "Species": "Nellie",
-    "Category": "mammalia",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "C",
-    "Description": "This animal blah blah blah",
-    "images": [
-      {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
-      }
-    ]
-  },
-  {
-    "Id": 17,
-    "Species": "Conrad",
-    "Category": "mammalia",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "A",
-    "Description": "This animal blah blah blah",
-    "images": [
-      {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
-      }
-    ]
-  },
-  {
-    "Id": 18,
-    "Species": "Meadows",
-    "Category": "mammalia",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "A",
-    "Description": "This animal blah blah blah",
-    "images": [
-      {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
-      }
-    ]
-  },
-  {
-    "Id": 19,
-    "Species": "Flora",
-    "Category": "mammalia",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "C",
-    "Description": "This animal blah blah blah",
-    "images": [
-      {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
-      }
-    ]
-  },
-  {
-    "Id": 20,
-    "Species": "Essie",
-    "Category": "aquatic",
-    "Required_Habitat": "Habitat blah blah",
-    "Required_License": "C",
-    "Description": "This animal blah blah blah",
-    "images": [
-      {
-        "PhotoUrl": "https://extension.umd.edu/sites/extension.umd.edu/files/styles/optimized/public/2021-02/hgic_veg_wildlife_raccoon.jpg?itok=p4k_Z_CF",
-        "Description": "this here is a racoon"
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662579917/luzbrp0mllrptcgopwsq.jpg",
+        "Description": "shark pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662579915/ki4l7c0ayzkruaro3lzl.jpg",
+        "Description": "shark pic3."
       }
     ]
   }
+
 ]
