@@ -187,9 +187,7 @@ namespace PetShop.PetShopBackend.API.Controllers
             return dto;
         }
 
-
-
-        
+                
         public async Task<bool> GetIsUserAdmin(string username){
            
             return await _uow.users.CheckIfIsAdminAsync(username);

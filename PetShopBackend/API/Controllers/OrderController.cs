@@ -90,6 +90,11 @@ namespace API.Controllers
 
             var user = (await _uow.customers.GetCustomerForUpdates(username)).Value;
 
+            if(user.CreditInfo == null || user.CreditInfo == "")
+            {
+                return BadRequest("In order to checkout items, you must enter your payment information in the profile page (just enter any random string...please do not enter real sensitive info).");
+            }
+
             var AnimalData = await _uow.animals.GetAnimalsForCheckout(user);
 
             List<ShoppingCartItem> cartList = user.ShoppingCart.ToList();
