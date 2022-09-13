@@ -34,7 +34,9 @@ namespace API.Data.DataAccess.RepositoryClasses
 
         public async Task<IEnumerable<string>> GetCategoriesAsync()
         {
-            return await _context.Animals.Include(x => x.images).Select(x => x.Category).Distinct().ToListAsync();
+            // return await _context.Animals.Include(x => x.images).Select(x => x.Category).Distinct().ToListAsync(); I assume including images here was a mistake
+            
+            return await _context.Animals.Where(x=>x.IsArchived==false).Select(x => x.Category).Distinct().ToListAsync();
         }
 
 

@@ -46,11 +46,6 @@ namespace PetShop.PetShopBackend.API.Controllers
         {
             var cates = await _uow.animals.GetCategoriesAsync();
 
-            // foreach (var i in cates)
-            // {
-            //     utils.DebugMsg(i);
-            // }     
-
             return Ok(cates);
 
         }
@@ -65,21 +60,7 @@ namespace PetShop.PetShopBackend.API.Controllers
             return Ok(animals);
         }
 
-        // [HttpGet("Categories/{category}")]
-        // public async Task<ActionResult<IEnumerable<Animal>>> GetAnimalsByCategory(string category,[FromQuery] AnimalQueryParams queryParams)
-        // {
-
-        //     var animals = await _uow.animals.GetCategoryAnimalsAsync(category,queryParams);
-
-        //     Response.AddPaginationHeader(animals.CurrentPage, animals.Pagesize, animals.TotalItems, animals.TotalPages);
-
-
-        //     return Ok(animals);
-
-
-        // }
-
-
+  
         [HttpGet("{id}", Name = "GetAnimal")]
         public async Task<ActionResult<Animal>> GetAnimal(int id)
         {
@@ -110,7 +91,7 @@ namespace PetShop.PetShopBackend.API.Controllers
         }
 
         [HttpPost("NewAnimal")]
-        public async Task<ActionResult> AddNewAnimal(CreateAnimalDto dto)
+        public async Task<ActionResult<Animal>> AddNewAnimal(CreateAnimalDto dto)
         {
             if(!User.GetIsAdmin()){return BadRequest("Only admins can execute this action.");}
 
@@ -120,7 +101,7 @@ namespace PetShop.PetShopBackend.API.Controllers
 
             if (await _uow.Complete())
             {
-                return NoContent();
+                return animal;
             }
 
             return BadRequest("Failed to add animal to database");

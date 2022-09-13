@@ -53,7 +53,8 @@ namespace API.Data.DataAccess.RepositoryClasses
                     || x.customer.UserName.ToLower().Contains(p)
                     ||x.customer.Email.ToLower().Contains(p)
                     ||x.customer.Address.City.ToLower().Contains(p)
-                    ||x.customer.Address.Street.ToLower().Contains(p));
+                    ||x.customer.Address.Street.ToLower().Contains(p)
+                    ||x.OrderedAnimalName.ToLower().Contains(p));
                     
             }
 
