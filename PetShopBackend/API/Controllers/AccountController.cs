@@ -129,19 +129,16 @@ namespace PetShop.PetShopBackend.API.Controllers
             var customer = (await _uow.customers.GetCustomerAsync(username)).Value;
            
 
-            // map the DTO to the user automatically (otherwise we would have to do it manually)
-            // no need for that: user.City = memberUpdateDTO.City;
             _mapper.Map(dto, customer); 
 
             _uow.customers.Update(customer);
              
-            // now the entity is flagged as updated by EF (it's not saved yet and it doesn't matter if the entity was actually modified)
-
+           
             if(await _uow.Complete())
             {
                 return NoContent();
             }
-
+            
             return BadRequest("Failed to update profile");
 
         }
