@@ -33,7 +33,6 @@ namespace API.Data.DataAccess.RepositoryClasses
         {
             var admin = await _context.Admins.SingleOrDefaultAsync(x=>x.Id == dto.Id);
 
-            //should learn how to do this with automapper:
             admin.Avatar = dto.Avatar;
             admin.Email = dto.Email;
             admin.FirstName = dto.FirstName;

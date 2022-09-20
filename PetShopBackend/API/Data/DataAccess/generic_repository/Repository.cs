@@ -77,15 +77,5 @@ namespace API.Data.DataAccess.generic_repository
             return await Context.Set<TEntity>().AnyAsync();
         }
 
-
-
-        //     catch(ArgumentNullException ex)
-        //     {
-        //         System.Console.WriteLine(ex.Message);
-        //         return null;
-        //     }
-
-
-        // }
     }
 }

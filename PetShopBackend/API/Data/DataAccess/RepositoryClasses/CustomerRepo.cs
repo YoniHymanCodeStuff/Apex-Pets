@@ -28,16 +28,12 @@ namespace API.Data.DataAccess.RepositoryClasses
         {
             return await _context.Customers
             .AsNoTracking()
-            // .Include(x=>x.Orders)
             .Include(x=>x.ShoppingCart)
             .Include(a=>a.Address)
             .Include(x=>x.Avatar)
             .FirstOrDefaultAsync(x=>x.UserName == username);
 
-            //this is used in many places, some need all the details even 
-            //though not all do. might make sense to split it up more effectively. 
-            //however, effective use of Dtos should sove the issue. 
-        }
+         }
 
         public async Task<ActionResult<Customer>> GetCustomerForUpdates(string username)
         {
@@ -48,9 +44,6 @@ namespace API.Data.DataAccess.RepositoryClasses
             .Include(a=>a.Address)
             .FirstOrDefaultAsync(x=>x.UserName == username);
 
-            //this is used in many places, some need all the details even 
-            //though not all do. might make sense to split it up more effectively. 
-            //however, effective use of Dtos should sove the issue. 
         }
 
         public async Task<IEnumerable<Order>> GetCustomerOrders(string customerName)
@@ -63,6 +56,5 @@ namespace API.Data.DataAccess.RepositoryClasses
 
         }
 
-        //why am I returning an actionResult? this might be a mistake. 
     }
 }

@@ -9,7 +9,7 @@ using API.Data.Model;
 using API.helpers;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using static API.utilities.utils;
+
 
 namespace API.Data.DataAccess.RepositoryClasses
 {
@@ -27,15 +27,13 @@ namespace API.Data.DataAccess.RepositoryClasses
         public async Task<Animal> GetAnimalEagerAsync(int id)
         {
             return await _context.Animals
-            //.AsNoTracking() //this could screw me over. might need 2 versions. 
             .Include(x => x.images)
             .FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<IEnumerable<string>> GetCategoriesAsync()
         {
-            // return await _context.Animals.Include(x => x.images).Select(x => x.Category).Distinct().ToListAsync(); I assume including images here was a mistake
-            
+                       
             return await _context.Animals.Where(x=>x.IsArchived==false).Select(x => x.Category).Distinct().ToListAsync();
         }
 
@@ -79,18 +77,6 @@ namespace API.Data.DataAccess.RepositoryClasses
 
             return cartAnimals;
         }
-
-        // public async Task<PagedList<Animal>> GetCategoryAnimalsAsync(string category, AnimalQueryParams queryParams)
-        // {
-
-        //     var query =
-
-        //              _context.Animals.Include(x => x.images).Where(x => x.Category == category
-        //             && !x.IsArchived).AsNoTracking();
-
-        //     return await PagedList<Animal>.CreateAsync(query, queryParams.Pagenumber, queryParams.PageSize);
-
-        // }
 
         public async Task<PagedList<Animal>> GetPagedAnimalsAsync(AnimalQueryParams queryParams)
         {
@@ -173,7 +159,7 @@ namespace API.Data.DataAccess.RepositoryClasses
         {
             var animal = await _context.Animals.Include(x => x.images).FirstOrDefaultAsync(x => x.Id == id);
 
-            _context.Animals.Remove(animal); //couldn't find the async version  of this. kind of foggy on when you need it to be async here... 
+            _context.Animals.Remove(animal);
         }
 
         public async Task ArchiveAnimalAsync(int id)
@@ -182,7 +168,6 @@ namespace API.Data.DataAccess.RepositoryClasses
 
             animal.IsArchived = true;
 
-            //I think it auto updates here... 
         }
 
         public async Task<CartAnimalDto> GetCartAnimal(ShoppingCartItem item)

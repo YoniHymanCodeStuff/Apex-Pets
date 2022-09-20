@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
+
 using System.Text.Json;
-using System.Threading.Tasks;
 using API.helpers;
 using Microsoft.AspNetCore.Http;
 
@@ -23,7 +20,7 @@ namespace API.Extensions
             };
 
             response.Headers.Add("pagination",JsonSerializer.Serialize(header,options));
-            response.Headers.Add("Access-Control-Expose-Headers","Pagination");//this is telling cors to allow this header access. 
+            response.Headers.Add("Access-Control-Expose-Headers","Pagination"); 
 
         }
     }

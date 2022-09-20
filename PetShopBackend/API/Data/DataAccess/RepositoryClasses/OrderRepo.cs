@@ -146,7 +146,6 @@ namespace API.Data.DataAccess.RepositoryClasses
 
             return retOrder;
 
-            // _context.Orders.Update(order);//should auto update
             
         }
     }

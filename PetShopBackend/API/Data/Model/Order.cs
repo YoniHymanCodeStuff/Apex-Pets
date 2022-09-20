@@ -13,7 +13,7 @@ namespace API.Data.Model
         public Customer customer {get;set;}
                 
         public DateTime OrderTimeStamp { get; set; }
-        public string OrderStatus { get; set; }//pending/delivered - should this be bool or are there more states?
+        public string OrderStatus { get; set; }
         
         public DateTime DeliveryTimeStamp { get; set; }
 
