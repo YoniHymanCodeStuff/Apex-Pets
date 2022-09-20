@@ -38,7 +38,7 @@ namespace API
                 //migrates the db if entire db doesn't exist:
                 await context.Database.MigrateAsync();
 
-                await Seed.SeedAnimals(uow);
+                await Seed.SeedBaseData(uow);
             }
 
             catch(System.Exception ex)
