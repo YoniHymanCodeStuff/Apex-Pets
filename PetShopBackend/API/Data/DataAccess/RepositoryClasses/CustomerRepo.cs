@@ -1,12 +1,9 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using API.Data.DataAccess.generic_repository;
 using API.Data.DataAccess.RepositoryInterfaces;
-using API.Data.DTOs;
 using API.Data.Model;
-using API.helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

@@ -14,7 +14,6 @@ using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using API.Data;
 using API.Data.DataAccess;
-using PetShop.PetShopBackend.API.Extensions;
 using API.Data.DataAccess.UnitOfWork;
 using API.Data.DataAccess.RepositoryClasses;
 using API.Data.DataAccess.RepositoryInterfaces;
@@ -30,7 +29,8 @@ using API.helpers;
 using Newtonsoft.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-
+using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.SpaServices.AngularCli;
 namespace API
 {
     public class Startup
@@ -52,6 +52,11 @@ namespace API
             //organize all the things I'm using here. 
 
 
+            // services.AddSpaStaticFiles(configuration =>
+            //     {
+            //         configuration.RootPath = "../../WebPetShop/dist";
+            //     });
+
             services.AddDbContext<DataContext>(options =>
             options.UseSqlite(_config.GetConnectionString("DefaultConnection"))
             );
@@ -64,8 +69,6 @@ namespace API
             services.Configure<CloudinarySettings>(_config.GetSection("CloudinarySettings"));
             services.AddScoped<IPhotoService, PhotoService>();
 
-            //some debugging thing, I think i'm missing the package for it:
-            //services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -98,7 +101,6 @@ namespace API
             if (env.IsDevelopment())
             {
 
-                //app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
             }
@@ -120,6 +122,16 @@ namespace API
                 endpoints.MapControllers();
             });
 
+
+            // app.UseSpaStaticFiles();
+            // app.UseSpa(spa =>
+            // {
+            //     spa.Options.SourcePath = "../../WebPetShop";
+            //     if (env.IsDevelopment())
+            //     {
+            //         spa.UseAngularCliServer(npmScript: "start");
+            //     }
+            // });
 
 
         }

@@ -25,7 +25,6 @@ namespace API.Data.DataAccess
         public DbSet<ShoppingCartItem> ShoppingCartItems {get;set;}
         public DbSet<DeliveryAdress> Adresses {get;set;}
 
-        //this part is just to rename i think.// why am I doing this here? 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 

@@ -1,20 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
+
 using System.Threading.Tasks;
-using API.Data;
-using API.Data.DataAccess;
 using API.Data.DataAccess.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
-using API.utilities;
 using API.Controllers;
 using API.Data.Model;
 using System.Security.Cryptography;
 using API.Services.authentication;
 using API.Data.DTOs;
-using API.helpers;
 using AutoMapper;
-using System.Security.Claims;
 using API.Extensions;
 
 namespace PetShop.PetShopBackend.API.Controllers
@@ -157,14 +150,12 @@ namespace PetShop.PetShopBackend.API.Controllers
             return BadRequest("Failed to update profile");
         }
 
-        [HttpGet("Customer/{username}",Name = "GetCustomer")]
-        public async Task<ActionResult<CustomerDto>> GetCustomer(string username)
+        [HttpGet("Customer")]
+        public async Task<ActionResult<CustomerDto>> GetCustomer()
         {
-            
-            //need to et rid of the username input hee since we are just using the dat from the token
-            
-            var uusername =  User.GetUserName();
-            var cust =  (await _uow.customers.GetCustomerAsync(uusername)).Value;
+                       
+            var username =  User.GetUserName();
+            var cust =  (await _uow.customers.GetCustomerAsync(username)).Value;
 
             var custDto = _mapper.Map<CustomerDto>(cust);
 

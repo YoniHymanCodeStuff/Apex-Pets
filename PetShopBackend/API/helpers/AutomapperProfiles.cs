@@ -50,5 +50,3 @@ namespace API.helpers
     }
 }
 
-//not sure why I shouldn't just move this to services... or utilities. seems like a 
-//lot of folders are synonymous. 

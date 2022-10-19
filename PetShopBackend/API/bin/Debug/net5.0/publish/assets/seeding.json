@@ -1,0 +1,886 @@
+[
+  {
+    "Id": 1,
+    "Name": "Great white shark",
+    "Species": "Carcharodon carcharias",
+    "Category": "aquatic",
+    "Required_Habitat": "1 million gallon aquarium",
+    "Description": "The great white shark is an apex predator, as it has no known natural predators other than, on very rare occasions, the orca. It is arguably the world's largest-known extant macropredatory fish, and is one of the primary predators of marine mammals, up to the size of large baleen whales. This shark is also known to prey upon a variety of other marine animals, including fish, and seabirds. It is the only known surviving species of its genus Carcharodon, and is responsible for more recorded human bite incidents than any other shark.",
+    "price":1080000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662560572/wr2x4jcjjk4y9v2ea195.jpg",
+        "Description": "shark pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662560576/vwtjlfvis8p4iniaxvws.webp",
+        "Description": "shark pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662560569/ygcm3yt1bte2w0uemjoi.webp",
+        "Description": "shark pic3."
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "Bull Shark",
+    "Species": "Carcharhinus leucas",
+    "Category": "aquatic",
+    "Required_Habitat": "380,000 gallon aquarium",
+    "Description": "Bull sharks are aggressive, common, and usually live near high-population areas like tropical shorelines. They are not bothered by brackish and freshwater, and even venture far inland via rivers and tributaries.",
+    "price":500000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662566468/ce76mzez7reeh41x6clg.jpg",
+        "Description": "shark pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662566463/yqoyrqknbzmae9jjkpwy.webp",
+        "Description": "shark pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662566459/stb0gfqlxra0q7ndsrsp.jpg",
+        "Description": "shark pic3."
+      },
+      {"PhotoUrl":"https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662566456/og6ebppgrsjxpokfrczk.webp",
+      "Description": "shark pic4."
+    }
+    ]
+  },
+  {
+    "Id": 3,
+    "Name": "Orca",
+    "Species": "Orcinus orca",
+    "Category": "aquatic",
+    "Required_Habitat": "1 million gallon aquarium",
+    "Description": "The orca or killer whale (Orcinus orca) is a toothed whale belonging to the oceanic dolphin family, of which it is the largest member. It is recognizable by its black-and-white patterned body. A cosmopolitan species, orcas can be found in all of the world's oceans in a variety of marine environments, from Arctic and Antarctic regions to tropical seas.",
+    "price":1000000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662567492/agrp6k7vbol5tkw7y324.jpg",
+        "Description": "orca pic."
+      }, 
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662567488/igfnwifj1gpxukgigxur.webp",
+        "Description": "orca pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662567486/pycabp02ybv2jsqqq48e.webp",
+        "Description": "orca pic3."
+      }
+    ]
+  },
+  {
+    "Id": 4,
+    "Name": "Giant squid",
+    "Species": "Architeuthis dux",
+    "Category": "aquatic",
+    "Required_Habitat": "750 thousand gallon aquarium",
+    "Description": "The giant squid remains largely a mystery to scientists despite being the biggest invertebrate on Earth. The largest of these elusive giants ever found measured 59 feet in length and weighed nearly a ton.",
+    "price":140000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662574261/jgqboddgk4g3czc2gc2c.webp",
+        "Description": "squid pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662574259/sxmdr1nhtvb0k0r0qaht.webp",
+        "Description": "squid pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662574265/dr148adpk1htga63rg4z.jpg",
+        "Description": "squid pic3."
+      }
+    ]
+  },
+  {
+    "Id": 5,
+    "Name": "Yellow sea snake",
+    "Species": "Hydrophis spiralis",
+    "Category": "reptilians",
+    "Required_Habitat": "2000 gallon aquarium",
+    "Description": "The yellow sea snake (Hydrophis platurus) is a venomous species of snake from the subfamily Hydrophiinae (the sea snakes) found in tropical oceanic waters around the world except for the Atlantic Ocean. For many years, it was placed in the monotypic genus Pelamis, but recent molecular evidence indicates it lies within the genus Hydrophis.",
+    "price":850,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662575600/yrc1kqpvs0wrhhdb95qh.jpg",
+        "Description": "snake pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662575598/iht1icacus17uezjsjqb.jpg",
+        "Description": "snake pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662575595/brqc9dva4i2k3pdkxde7.jpg",
+        "Description": "snake pic3."
+      }
+    ]
+  },
+  {
+    "Id": 6,
+    "Name": "Giant Oarfish",
+    "Species": "Regalecus glesne",
+    "Category": "aquatic",
+    "Required_Habitat": "1500 gallon aquarium",
+    "Description": "The giant oarfish (Regalecus glesne) is a species of oarfish of the family Regalecidae. It is an oceanodromous species with a worldwide distribution, excluding polar regions. Other common names include Pacific oarfish, king of herrings, ribbonfish, and streamer fish.[3]",
+    "price":3000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662576713/e9hnsys4aigrw8wxxlnw.webp",
+        "Description": "oarfish pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662576710/jqb7hwmta3apz4jazp0c.webp",
+        "Description": "oarfish pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662576708/vcirqoj6q4ugakynnlzv.jpg",
+        "Description": "oarfish pic3."
+      }
+    ]
+  },
+  {
+    "Id": 7,
+    "Name": "Giant Pacific Octopus",
+    "Species": "Enteroctopus dofleini",
+    "Category": "aquatic",
+    "Required_Habitat": "2000 gallon aquarium",
+    "Description": "The giant Pacific octopus is considered the largest octopus species in the world and inhabits the northern Pacific Ocean off the United States up to Alaska and around Japan. The largest individual on record weighed an impressive 600 pounds and measured 30 feet across in length. On average, though, these octopuses weigh closer to 110 pounds and measure 16 feet across once fully grown. Like other octopuses, the giant Pacific octopus is extremely intelligent and has been observed opening jars and mimicking other species.",
+    "price":10000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662577665/sw13y1xdkld7wgvbujnq.jpg",
+        "Description": "octo pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662577663/o7984fpqjm1d7dymd2vq.jpg",
+        "Description": "octo pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662577661/ksmahr0neink5pfg2mot.jpg",
+        "Description": "octo pic3."
+      }
+    ]
+  },
+  {
+    "Id": 8,
+    "Name": "Stonefish",
+    "Species": "Synanceia",
+    "Category": "aquatic",
+    "Required_Habitat": "400 gallon aquarium",
+    "Description": "Synanceia is a genus of ray-finned fish belonging to the subfamily Synanceiinae, the stonefishes, which is classified within the family Scorpaenidae, the scorpionfishes and relatives. Stonefishes are venomous, dangerous, and fatal to humans. They are the most venomous fish known.[2][3] They are found in the coastal regions of the Indo-Pacific.",
+    "price":400,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662578616/fcy1j7xywlx5nna4wpvc.jpg",
+        "Description": "stone pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662578614/sgd963oqaaf2yibmissn.jpg",
+        "Description": "stone pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662578611/ntmc6tqxxhoq7440x8om.jpg",
+        "Description": "stone pic3."
+      }
+    ]
+  },
+  {
+    "Id": 9,
+    "Name": "Box jellyfish",
+    "Species": "Medusozoa Cubozoa",
+    "Category": "aquatic",
+    "Required_Habitat": "1000 gallon aquarium",
+    "Description": "Box jellyfish are cnidarian invertebrates distinguished by their box-like (i.e. cube-shaped) body. Some species of box jellyfish produce potent venom delivered by contact with their tentacles. Stings from some species, including Chironex fleckeri, Carukia barnesi, Malo kingi, and a few others, are extremely painful and often fatal to humans.",
+    "price":200,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662579265/f52umvxqb6j7f4obntp7.webp",
+        "Description": "jellyfish pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662579189/z4nd3ootucdv74fvt6yo.jpg",
+        "Description": "jellyfish pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662579183/hateody3dpdqxyjcxuju.png",
+        "Description": "jellyfish pic3."
+      }
+    ]
+  },
+  {
+    "Id": 10,
+    "Name": "Great hammerhead",
+    "Species": "Sphyrna mokarran",
+    "Category": "aquatic",
+    "Required_Habitat": "1 million gallon aquarium",
+    "Description": "The great hammerhead (Sphyrna mokarran) is the largest species of hammerhead shark, belonging to the family Sphyrnidae, attaining an average length of 4.6 m (15 ft) and reaching a maximum length of 6.1 m (20 ft). It is found in tropical and warm temperate waters worldwide, inhabiting coastal areas and the continental shelf. ",
+    "price":1600000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662579919/mih63nfrekmpctulygyk.jpg",
+        "Description": "shark pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662579917/luzbrp0mllrptcgopwsq.jpg",
+        "Description": "shark pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662579915/ki4l7c0ayzkruaro3lzl.jpg",
+        "Description": "shark pic3."
+      }
+    ]
+  },
+  {
+    "Id": 11,
+    "Name": "Siberian tiger",
+    "Species": "Panthera tigris tigris",
+    "Category": "mammalia",
+    "Required_Habitat": "37 squared meter enclosure.",
+    "Description": "The tiger (Panthera tigris) is the largest living cat species and a member of the genus Panthera. It is most recognisable for its dark vertical stripes on orange fur with a white underside. An apex predator, it primarily preys on ungulates, such as deer and wild boar. It is territorial and generally a solitary but social predator, requiring large contiguous areas of habitat to support its requirements for prey and rearing of its offspring. Tiger cubs stay with their mother for about two years and then become independent, leaving their mother's home range to establish their own.",
+    "price":7500,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662983000/bzgkru3qeri69ueqw3ei.jpg",
+        "Description": "tiger pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662982996/tmegexyony31kivpothz.jpg",
+        "Description": "tiger pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662982994/zxizt8istz2dueetcrqv.jpg",
+        "Description": "tiger pic3."
+      }
+    ]
+  },
+  {
+    "Id":12 ,
+    "Name": "Gorilla",
+    "Species": "Troglodytes gorilla",
+    "Category": "mammalia",
+    "Required_Habitat": "30 squared meter enclosure.",
+    "Description": "Gorillas are the largest living primates, reaching heights between 1.25 and 1.8 metres, weights between 100 and 270 kg, and arm spans up to 2.6 metres, depending on species and sex. They tend to live in troops, with the leader being called a silverback. The Eastern gorilla is distinguished from the Western by darker fur colour and some other minor morphological differences. Gorillas tend to live 35–40 years in the wild.",
+    "price":40000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662983478/zswembtzt7wgpdgkumzv.jpg",
+        "Description": "Gorilla pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662983476/qgwqsulwjhbkvdexvecf.jpg",
+        "Description": "Gorilla pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662983474/lmyh5pe7ai2lznwizpga.jpg",
+        "Description": "Gorilla pic3."
+      }
+    ]
+  },
+  {
+    "Id":13 ,
+    "Name": "Polar bear",
+    "Species": "Ursus maritimus",
+    "Category": "mammalia",
+    "Required_Habitat": "1 acre with ample water and air conditioning.",
+    "Description": "The polar bear is a hypercarnivorous bear whose native range lies largely within the Arctic Circle, encompassing the Arctic Ocean, its surrounding seas and surrounding land masses. It is the largest extant bear species, as well as the largest extant land carnivore.",
+    "price":420000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662983961/ybnauiyk8w1mtnnjsjqk.jpg",
+        "Description": "Bear pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662983959/kfdouidcq2s8gkbkscqq.jpg",
+        "Description": "Bear pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662983951/fklxhjfca7cz8pkjthxf.jpg",
+        "Description": "Bear pic3."
+      }
+    ]
+  },
+  {
+    "Id": 14,
+    "Name": "Grizzly bear",
+    "Species": "Ursus arctos horribilis",
+    "Category": "mammalia",
+    "Required_Habitat": "1 acre",
+    "Description": "Grizzlies are considered more aggressive compared to black bears when defending themselves and their offspring.[123] Unlike the smaller black bears, adult grizzlies do not climb trees well, and respond to danger by standing their ground and warding off their attackers.[124] Mothers defending cubs are the most prone to attacking, and are responsible for 70% of humans killed by grizzlies.",
+    "price":2000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662984322/tvg8vibacck0rnbynnhm.jpg",
+        "Description": "Grizzly pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662984317/wlf5orgehinvhcuwtaq9.jpg",
+        "Description": "Grizzly pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662984314/qfid1n2lhgyctl3htxrw.jpg",
+        "Description": "Grizzly pic3."
+      }
+    ]
+  },
+  {
+    "Id": 15,
+    "Name": "Leopard",
+    "Species": "Panthera pardus",
+    "Category": "mammalia",
+    "Required_Habitat": "at least 28m² floor space",
+    "Description": "ompared to other wild cats, the leopard has relatively short legs and a long body with a large skull. Its fur is marked with rosettes. It is similar in appearance to the jaguar (Panthera onca), but has a smaller, lighter physique, and its rosettes are generally smaller, more densely packed and without central spots.",
+    "price":4000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662984602/nxjeizsl0yj87bjgaq0n.jpg",
+        "Description": "leopard pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662984600/zcffikyweecxohvqgi60.jpg",
+        "Description": "leopard pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662984598/omfjnwcbc6vtfjrrbs8m.jpg",
+        "Description": "leopard pic3."
+      }
+    ]
+  },
+  {
+    "Id": 16,
+    "Name": "Lion",
+    "Species": "Panthera leo",
+    "Category": "mammalia",
+    "Required_Habitat": "37m² floor space",
+    "Description": "One of the most widely recognised animal symbols in human culture, the lion has been extensively depicted in sculptures and paintings, on national flags, and in contemporary films and literature. Lions have been kept in menageries since the time of the Roman Empire and have been a key species sought for exhibition in zoological gardens across the world since the late 18th century. ",
+    "price":3000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662984896/e9ndzp9hfrjm29cvlklr.jpg",
+        "Description": "Lion pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662984894/nhpt1ipfj5sn5ej6dokt.jpg",
+        "Description": "Lion pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662984892/btnzs4tuh2zptfffjkqh.jpg",
+        "Description": "Lion pic3."
+      }
+    ]
+  },
+  {
+    "Id": 17,
+    "Name": "Dingo",
+    "Species": "Canis familiaris dingo",
+    "Category": "mammalia",
+    "Required_Habitat": "floor area of 30 sq. metres",
+    "Description": "The dingo is a medium-sized canine that possesses a lean, hardy body adapted for speed, agility, and stamina. The dingo's three main coat colourations are light ginger or tan, black and tan, or creamy white. The skull is wedge-shaped and appears large in proportion to the body.",
+    "price":650,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662985208/acfo1fpucbnsountwdou.jpg",
+        "Description": "Dingo pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662985206/whvglc0nva8vl8aaxss5.jpg",
+        "Description": "Dingo pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662985204/ywexhuoohnc0nrujewjq.jpg",
+        "Description": "Dingo pic3."
+      }
+    ]
+  },
+  {
+    "Id": 18,
+    "Name": "Wolf",
+    "Species": "Canis lupus",
+    "Category": "mammalia",
+    "Required_Habitat": "The minimum recommended floor space per animal in an outdoor enclosure is 18.5m².",
+    "Description": "The wolf, also known as the gray wolf or grey wolf, is a large canine native to Eurasia and North America. More than thirty subspecies of Canis lupus have been recognized, and gray wolves, as popularly understood, comprise wild subspecies. The wolf is the largest extant member of the family Canidae.",
+    "price":1500,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662985448/qhzjpsxcamvedpdndkis.jpg",
+        "Description": "Wolf pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662985446/nrfjtjww0woz8fjoziat.jpg",
+        "Description": "Wolf pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662985208/acfo1fpucbnsountwdou.jpg",
+        "Description": "Wolf pic3."
+      }
+    ]
+  },
+  {
+    "Id": 19,
+    "Name": "Hippopotamus",
+    "Species": "Hippopotamus amphibius",
+    "Category": "mammalia",
+    "Required_Habitat": "900 square meters.",
+    "Description": "The hippo is considered to be extremely aggressive and has frequently been reported charging and attacking boats.[99] Small boats can easily be capsized by hippos and passengers can be injured or killed by the animals, or drown in the water. In one 2014 case in Niger, a boat was capsized by a hippo and 13 people were killed.",
+    "price":100000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662985853/zbgac8gn3n0fbxs1ws4g.jpg",
+        "Description": "hippo pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662985851/kltnr5zkdfhgp1xzimeo.jpg",
+        "Description": "hippo pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662985849/xjtbnscdojndq8jeqnv4.jpg",
+        "Description": "hippo pic3."
+      }
+    ]
+  },
+  {
+    "Id": 20,
+    "Name": "Black rhinoceros",
+    "Species": "Diceros bicornis",
+    "Category": "mammalia",
+    "Required_Habitat": "100 m²",
+    "Description": "Rhinoceroses are some of the largest remaining megafauna: all weigh at least one tonne in adulthood. They have a herbivorous diet, small brains (400–600 g) for mammals of their size, one or two horns, and a thick (1.5–5 cm), protective skin formed from layers of collagen positioned in a lattice structure.",
+    "price":29000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662986248/p8bbki2ir7nkkc0zrxq3.jpg",
+        "Description": "rhino pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662986253/javb4imctqpvqgwjpmj9.jpg",
+        "Description": "rhino pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662986255/knffxf1f9jkhw4xvslzp.jpg",
+        "Description": "rhino pic3."
+      }
+    ]
+  },
+  {
+    "Id": 21,
+    "Name": "Cassowary",
+    "Species": "Casuarius casuarius",
+    "Category": "avians",
+    "Required_Habitat": "18m x 12m",
+    "Description": "Cassowaries are the only members of the family Casuariidae and belong to the order Casuariiformes, which also includes the emu. Three species (counted by some experts as six), each with several races, live in habitats that span parts of Australia and New Guinea. The cassowary has been known to kill human beings with slashing blows of its feet, as the innermost of its three toes bears a long daggerlike nail. The bird has been observed moving rapidly along narrow tracks in the bush, sprinting as fast as 50 km (31 miles) per hour.",
+    "price":1200,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662986921/zksswqok9nm3qrmr7vze.jpg",
+        "Description": "Cassowary pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662986918/zg7w1xme4mrvs8rqhkyo.jpg",
+        "Description": "Cassowary pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662986915/mykkjjmv3g6gze6mwrqh.jpg",
+        "Description": "Cassowary pic3."
+      }
+    ]
+  },
+  {
+    "Id":22 ,
+    "Name": "Ostrich",
+    "Species": "Struthio camelus",
+    "Category": "avians",
+    "Required_Habitat": "minimum pen size 15 x 40m.",
+    "Description": "A frightened ostrich can achieve a speed of 72.5 kilometers (45 miles) per hour. If cornered, it can deliver dangerous kicks capable of killing lions and other large predators. Deaths from kicks and slashes are rare, with most attacks resulting from humans provoking the birds.",
+    "price":10000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662988977/lt6utfogmb7iv2ew73pn.jpg",
+        "Description": "Ostrich pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662988973/n0k5tpe5nx4xppunzlke.jpg",
+        "Description": "Ostrich pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662988970/kdzeise9b9q2xqcd5g4v.jpg",
+        "Description": "Ostrich pic3."
+      }
+    ]
+  },
+  {
+    "Id":23 ,
+    "Name": "Emu",
+    "Species": "Dromaius novaehollandiae",
+    "Category": "avians",
+    "Required_Habitat": "1000 square feet of space per pair of emu",
+    "Description": "Reports of emu attacks resulting in a range of injuries in Australia and in wild-animal parks, emu farms, and zoos across the world are not uncommon, with more than 100 occurring in 2009 alone.",
+    "price":15000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662989299/cizsf0etpyrycnlp1crn.jpg",
+        "Description": "emu pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662989301/dbsq1hnda90e92fp2t4q.jpg",
+        "Description": "emu pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662989303/svq7dl7pwmitwmr130em.webp",
+        "Description": "emu pic3."
+      }
+    ]
+  },
+  {
+    "Id":24 ,
+    "Name": "Bearded vulture",
+    "Species": "Gypaetus barbatus",
+    "Category": "avians",
+    "Required_Habitat": "reasonable enclosure size is 10m width*12m depth*5- 7m height.",
+    "Description": "Bearded vultures are big eaglelike vultures of the Old World (family Accipitridae). These birds often reach lengths of more than 1 meter (40 inches), with a wingspread of nearly 3 meters (10 feet). They inhabit mountainous regions from Central Asia and eastern Africa to Spain and dine on carrion, especially bones, which they drop from heights as great as 80 meters (260 feet) onto flat rocks below.",
+    "price":120,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662989547/ccpenuoww1ruza9c1egt.jpg",
+        "Description": "vulture pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662989550/mmf9xyjckatvexacv3eo.jpg",
+        "Description": "vulture pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662989554/soa7z0mnv24gjk8wrshs.jpg",
+        "Description": "vulture pic3."
+      }
+    ]
+  },
+  {
+    "Id": 25,
+    "Name": "Andean condor",
+    "Species": "Vultur gryphus",
+    "Category": "avians",
+    "Required_Habitat": "The average height of enclosures is 7.6 m (25 ft), with the tallest enclosure having a recorded height of 30.5 m",
+    "Description": "Found in the Andes mountains and adjacent Pacific coasts of western South America, the Andean condor is the largest flying bird in the world by combined measurement of weight and wingspan.",
+    "price":4000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662989899/gmou2lnqjg7rstpxrrux.jpg",
+        "Description": "condor pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662989895/wcioza9ubf6eojo9btox.jpg",
+        "Description": "condor pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662989893/cts994ce7gao6esrs1dc.jpg",
+        "Description": "condor pic3."
+      }
+    ]
+  },
+  {
+    "Id":26,
+    "Name": "Bald eagle",
+    "Species": "Haliaeetus leucocephalus",
+    "Category": "avians",
+    "Required_Habitat": "140 feet long, 24 feet high and 20 feet wide",
+    "Description": "Bald eagles are not actually bald; the name derives from an older meaning of the word, 'white headed'. The adult is mainly brown with a white head and tail. The sexes are identical in plumage, but females are about 25 percent larger than males. The yellow beak is large and hooked. ",
+    "price":1000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662990363/g8mqebr7iepevfcgmust.jpg",
+        "Description": "eagle pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662990361/baifap1szamlkgqbwhsj.jpg",
+        "Description": "eagle pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662990359/jfukwoxxz4xqoypcnuyg.jpg",
+        "Description": "eagle pic3."
+      }
+    ]
+  },
+  {
+    "Id":27,
+    "Name": "Great horned owl",
+    "Species": "Bubo virginianus",
+    "Category": "avians",
+    "Required_Habitat": " enclosures that are no less than 2.4m (8ft) in height.",
+    "Description": "The great horned owl, also known as the tiger owl (originally derived from early naturalists' description as the tiger of the air, or the hoot owl, is a large owl native to the Americas. It is an extremely adaptable bird with a vast range and is the most widely distributed true owl in the Americas.[4] Its primary diet is rabbits and hares, rats and mice, and voles, although it freely hunts any animal it can overtake, including rodents and other small mammals, larger mid-sized mammals, birds, reptiles, amphibians, and invertebrates.",
+    "price":3800,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662990870/k9meem4ikocbqvznrsfd.jpg",
+        "Description": "owl pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662990866/spa5oihpljvztlggnu11.jpg",
+        "Description": "owl pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662990863/qidyxx51rqvfflfhcra6.jpg",
+        "Description": "owl pic3."
+      }
+    ]
+  },
+  {
+    "Id":28 ,
+    "Name": "Barred Owl",
+    "Species": "Strix varia",
+    "Category": "avians",
+    "Required_Habitat": "3X3X3 meters",
+    "Description": "Barred owls, whose habitat includes much of the eastern United States and southeastern Canada, are smaller than great horned owls. They weigh between 630 and 800 grams (1.4 to 1.8 pounds) and have a wingspan of about 110 cm (43 inches). Attacks by barred owls on hikers have been reported from Texas to British Columbia.",
+    "price":800,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662991151/nevrjan9wyeahwt2qm6o.jpg",
+        "Description": "owl pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662991148/fdxdv6lmiywaoxqbrcnt.jpg",
+        "Description": "owl pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662991145/n6p5d8322xfrdyww1zqg.jpg",
+        "Description": "owl pic3."
+      }
+    ]
+  },
+  {
+    "Id":29 ,
+    "Name": "Flamingo",
+    "Species": "Phoenicopteridae",
+    "Category": "avians",
+    "Required_Habitat": "10 square meters",
+    "Description": "Flamingos usually stand on one leg with the other tucked beneath the body. The reason for this behaviour is not fully understood. One theory is that standing on one leg allows the birds to conserve more body heat, given that they spend a significant amount of time wading in cold water.",
+    "price":2500,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662991450/uxopbavwy3rs4ogjcgp5.jpg",
+        "Description": "Flamingo pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662991452/tr1txkdhqhqzny2isqzl.jpg",
+        "Description": "Flamingo pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662991454/ea3vdvvdwoerobftrbee.jpg",
+        "Description": "Flamingo pic3."
+      }
+    ]
+  },
+  {
+    "Id":30,
+    "Name": "Greater rhea",
+    "Species": "Rhea americana",
+    "Category": "avians",
+    "Required_Habitat": "15 m long and 15 m wide",
+    "Description": "The adults have an average weight of 20–27 kg (44–60 lb) and often measure 127 to 140 cm (50 to 55 in) long from beak to tail; they usually stand about 1.5 m (4 ft 11 in) tall, with a typical range of 1.4 to 1.7 m (4 ft 7 in to 5 ft 7 in), to the top of the head. The males are generally bigger than the females.",
+    "price":1500,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662991841/ahvussyvqu12ibvpjqcl.jpg",
+        "Description": "rhea pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662991837/zserpip91yfeteqkobv7.jpg",
+        "Description": "rhea pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662991834/ekzuxk78mzjwd9fzjw7o.jpg",
+        "Description": "rhea pic3."
+      }
+    ]
+  },
+  {
+    "Id":31,
+    "Name": "Komodo dragon",
+    "Species": "Varanus komodoensis",
+    "Category": "reptilians",
+    "Required_Habitat": "340 m²",
+    "Description": "Komodo dragons are apex predators, and dominate the ecosystems in which they live. Komodo dragons hunt and ambush prey including invertebrates, birds, and mammals. It has been claimed that they have a venomous bite; there are two glands in the lower jaw that secrete several toxic proteins.",
+    "price":30000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662992296/neczddrmjkqwexwowqsf.jpg",
+        "Description": "dragon pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662992299/sctrx1qhhzbiejrslwxe.jpg",
+        "Description": "dragon pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662992302/vxgkcqqlsgtgdt3mewdr.jpg",
+        "Description": "dragon pic3."
+      }
+    ]
+  },
+  {
+    "Id":32,
+    "Name": "Saltwater crocodile",
+    "Species": "Crocodylus porosus",
+    "Category": "reptilians",
+    "Required_Habitat": "A crocodile enclosure needs to be three times the length of the crocodile multiplied by twice its length. ",
+    "Description": "The saltwater crocodile is the largest living reptile and crocodilian known.[5][6][7] Males grow to a length of up to 6 m (20 ft), rarely exceeding 6.3 m (21 ft) or a weight of 1,000–1,300 kg (2,200–2,900 lb).",
+    "price":1100,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662992621/jwtsfphljgj0bh0zstoh.jpg",
+        "Description": "saltie pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662992623/vhvivtjmbn39q9overyi.jpg",
+        "Description": "saltie pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662992625/whw3wl8ydnituyoksaeu.jpg",
+        "Description": "saltie pic3."
+      }
+    ]
+  },
+  {
+    "Id":33,
+    "Name": "Nile crocodile",
+    "Species": "Crocodylus niloticus",
+    "Category": "reptilians",
+    "Required_Habitat": "A crocodile enclosure needs to be three times the length of the crocodile multiplied by twice its length. ",
+    "Description": "Despite most attacks going unreported, the Nile crocodile along with the saltwater crocodile is estimated to kill hundreds (possibly thousands) of people each year, which is more than all other crocodilian species combined.",
+    "price":1000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662993004/bndnzpxirztpcpa8rsre.jpg",
+        "Description": "croc pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662992890/jnvy04pyqjlovb9wqnem.jpg",
+        "Description": "croc pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662992885/q9y9pt1qbncrmb7llj7n.jpg",
+        "Description": "croc pic3."
+      }
+    ]
+  },
+  {
+    "Id":34,
+    "Name": "King cobra",
+    "Species": "Ophiophagus hannah",
+    "Category": "reptilians",
+    "Required_Habitat": "5 feet wide by 10 feet long and tall enough for a person to stand and maneuver during maintenance. ",
+    "Description": "he king cobra is the world's longest venomous snake, with an average length of 3.18 to 4 m (10.4 to 13.1 ft),[2] reaching a maximum of 5.85 m (19.2 ft).",
+    "price":300,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662994805/cdznbvqj81uxwmbqspsm.jpg",
+        "Description": "cobra pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662994807/tud08cwjngisfwc3xlr2.jpg", 
+        "Description": "cobra pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662994811/d6y4q4kougqahsaw4pfd.jpg",
+        "Description": "cobra pic3."
+      }
+    ]
+  },
+  {
+    "Id":35,
+    "Name": "Black mamba",
+    "Species": "Dendroaspis polylepis",
+    "Category": "reptilians",
+    "Required_Habitat": "20 to 50 gallon terrarium.",
+    "Description": "n a threat display, the black mamba usually opens its inky-black mouth, spreads its narrow neck-flap and sometimes hisses. It is capable of striking at considerable range and may deliver a series of bites in rapid succession. Its venom is primarily composed of neurotoxins that often induce symptoms within ten minutes, and is frequently fatal unless antivenom is administered.",
+    "price":5000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662995202/mioctqrodzlpcudzcabo.jpg",
+        "Description": "mamba pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662995205/bclbflzaxdyf0wfxlvhe.jpg",
+        "Description": "mamba pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662995209/j3jt6mj7f5s4p5jwgphx.jpg",
+        "Description": "mamba pic3."
+      }
+    ]
+  },
+  {
+    "Id":36,
+    "Name": "Indian saw-scaled viper",
+    "Species": "Echis carinatus",
+    "Category": "reptilians",
+    "Required_Habitat": "3 feet x 2 feet x 1.5 feet terrarium.",
+    "Description": "Echis carinatus is a venomous viper species found in parts of the Middle East and Central Asia, and especially the Indian subcontinent. It is the smallest member of the big four snakes that are responsible for causing the most snakebite cases and deaths, due to various factors including their frequent occurrence in highly populated regions, and their inconspicuous nature.",
+    "price":150,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662995609/xwtcnsqfdyedo6lmjtoi.jpg",
+        "Description": "viper pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662995611/erooislkbgv63eetrefm.jpg",
+        "Description": "viper pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662995613/x1e5h4ug8kmvmpfzui1q.jpg",
+        "Description": "viper pic3."
+      }
+    ]
+  },
+  {
+    "Id":37,
+    "Name": "Green anaconda",
+    "Species": "Eunectes murinus",
+    "Category": "reptilians",
+    "Required_Habitat": "20- to 30-gallon enclosure",
+    "Description": "The green anaconda, also known as the giant anaconda, common anaconda, common water boa or sucuri, is a boa species found in South America. It is the heaviest and one of the longest known extant snake species. Like all boas, it is a non-venomous constrictor.",
+    "price":10000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662995953/klweasxto0c40pznhvwa.jpg",
+        "Description": "anaconda pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662995949/gx3woltohgfrofu4ai41.jpg",
+        "Description": "anaconda pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662995946/qo81dex2t5bwusnpha6q.jpg",
+        "Description": "anaconda pic3."
+      }
+    ]
+  },
+  {
+    "Id":38,
+    "Name": "American alligator",
+    "Species": "Alligator mississippiensis",
+    "Category": "reptilians",
+    "Required_Habitat": " the open water area should have a length that's at least three times the total length of the alligator; a width that's at least twice the alligator's length and a depth that's at least twice the alligator's length.",
+    "Description": "American alligators are capable of killing humans, but fatal attacks are fairly rare. Mistaken identity leading to an attack is always possible, especially in or near cloudy waters. ",
+    "price":170,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662996396/yqxvasgox8aax5wdcteq.jpg",
+        "Description": "gator pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662996379/xfl29seraaorhraizcqb.jpg",
+        "Description": "gator pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662996329/m2hixv67d1wywo6dir2x.jpg",
+        "Description": "gator pic3."
+      }
+    ]
+  },
+  {
+    "Id":39,
+    "Name": "Poison dart frog",
+    "Species": "Dendrobatidae",
+    "Category": "reptilians",
+    "Required_Habitat": "18”x18”x18 inch terrarium.",
+    "Description": "These amphibians are often called dart frogs due to the Native Americans' use of their toxic secretions to poison the tips of blowdarts. However, of over 170 species, only four have been documented as being used for this purpose (curare plants are more commonly used), all of which come from the genus Phyllobates, which is characterized by the relatively large size and high levels of toxicity of its members.",
+    "price":80,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662996913/waxzoakwwubvd2u3sktc.jpg",
+        "Description": "frog pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662996910/ooxjgagkbatfitflcudr.jpg",
+        "Description": "frog pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662996917/baovujyyr4amhy134z82.jpg",
+        "Description": "frog pic3."
+      }
+    ]
+  },
+  {
+    "Id":40,
+    "Name": "Velociraptor",
+    "Species": "Velociraptor mongoliensis",
+    "Category": "reptilians",
+    "Required_Habitat": "Half acre enclosure with electric fences.",
+    "Description": "the Velociraptor ranges between 1.5–2.07 m (4.9–6.8 ft) long with a body mass between 15–18.3 kg (33–40 lb). It is a bipedal, feathered carnivore with a long tail and an enlarged sickle-shaped claw on each hindfoot, which is thought to be used to tackle and tear into prey. Velociraptor can be distinguished from other dromaeosaurids by its long and low skull, with an upturned snout.",
+    "price":2000000,
+    "images": [
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662997493/qpow80gbzihjp7kpjs3s.jpg",
+        "Description": "raptor pic."
+      },
+      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662997411/tcgffdy5nx0v9uvlex2s.avif",
+        "Description": "raptor pic2."
+      },      {
+        "PhotoUrl": "https://res.cloudinary.com/storage-for-demo-apps/image/upload/v1662997408/lcbhnvymzrifi1xxsdy8.webp",
+        "Description": "raptor pic3."
+      }
+    ]
+  }
+
+]

@@ -72,3 +72,12 @@ C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\AP
 C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
 C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\published\web.config
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\published\API.deps.json
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\published\API.runtimeconfig.json
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\published\appsettings.Development.json
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\published\appsettings.json
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\published\assets\seeding.json
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\Microsoft.AspNetCore.NodeServices.dll
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\Microsoft.AspNetCore.SpaServices.dll
+C:\Users\yonhy\OneDrive\Desktop\HackerU\MyAngularThing\PetShop\PetShopBackend\API\bin\Debug\net5.0\Microsoft.AspNetCore.SpaServices.Extensions.dll
