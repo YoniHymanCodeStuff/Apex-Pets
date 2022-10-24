@@ -1,9 +1,9 @@
 
-# Apex Pets
-an Ecommerce webapp shop built with dotnet backend and angular frontend.
+# Apex Pets Backend
+an Ecommerce webapp shop built with dotnet backend and angular frontend. This repository holds the Dotnet Backend of the app. 
 
 ## Concept
-This is a demo app created to showcase my abilities with dotnet and angular. In order to make the idea of creating an ecommerce app more amusing to me,
+This is a demo app created to showcase my abilities with dotnet and angular. In order to make the idea of creating an ecommerce app more amusing to me, 
 I decided to create a shop for a (fictional) store nobody in their right mind would want to buy from. The basic idea is a company that sells exotic extremely dangerous
 animals as pets, which are acquired in morally ambiguous ways. However, the content isn't really relevant, and at the end of the day it's just a functional webshop. 
 
@@ -26,22 +26,28 @@ Admins have access to the order manager, where they can view all the pending ord
 but I didn't want to make anyone enter real bank information. 
 -  since there is no real company behind this website, the input from the "contact us" section is currently not submitted to anywhere (I also thought that was kind of fitting to the amoral character of this (fictional) company to have the complaints submitted to nowhere).  
 
+## Architecture
+
+- The data retrieval implements repository pattern and unit of work to allow efficient, maintainable and loosely coupled code.  - filtering and sorting takes place during the initial pull from the database, so only the minimum neccessary data is sent through to the front end. 
+- includes global error handling. 
+- throughout the app the base object instances are created and used through dependency injection. 
+
+
 ## Behind the scenes
 
-- The app uses frontend typescript level caching with the data drawn. 
 - The database is in sqlite and managed via Entity framework. 
 - The photo storage of the app is through cloudinary services. 
 - The login and registration forms include various layers of validation. 
-- authorization details
-- authentication details. 
+- using jwt ssn authentication. 
+- Hmac encrypted user passwords. 
 
 
 ## Running the app
 
-In it's current form, you just have to download the files, and run the API file in dotnet, and serve the WebPetshop folder in angular. 
+In it's current form, you just have to download the files, and run program with dotnet run. The front end is donwloaded and run separately (see instructions there). 
+
 In order to test out "admin" mode, I added that in my CV I probably sent you. If you didn't get here through my cv, contact me and I will happily give you the password. I am not including that here becuase even though the app will
-run locally, changes you make in the photo editor will permanently alter/delete the photos in the cloudinary account, and leaving that open on 
-the internet may not be such a great idea if I want this to app to look presentable... 
+run locally, changes you make in the photo editor will permanently alter/delete the photos in the cloudinary account, and leaving that open on the internet may not be such a great idea if I want this to app to look presentable... 
 
 yonhyman@gmail.com
 
